@@ -1,0 +1,13 @@
+Papers/
+trabajo.pdf
+**.aux
+**.log
+**.bbl
+**.toc
+**.fls
+**.tdo
+**.aux
+**.out
+**.blg
+**fdb_latexmk
+**.doc
