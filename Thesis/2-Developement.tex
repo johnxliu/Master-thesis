@@ -1,0 +1,136 @@
+\chapter{D6-branes on Calabi-Yau manifolds}
+
+TYPES OF STRING THEORIES
+
+
+
+ROLE OF COMPACTIFICATION
+
+
+
+TYPES OF COMPACTIFICATIONS (Green, Uranga)
+
+%It is well known that any physical theory that describes our universe must allow for chiral 
+%fermions.
+%The are several ways to compactify a string theory in order to obtain chirality.
+
+We assume that the manifold is factorizable into a four-dimensional space and the compact space
+$\mathcal M =  N\times K$.
+
+\todoin{TIIA or TIIB?}
+\todoin{For what theories is the following reasoning exactly valid.}
+
+\todoin{Reason for N=1, chirality or th other reasons. I think N=something for other reasons and
+N=1 for chirality.
+}
+
+Out of the possible ways to compactify a theory, we pick out the ones that preserve some
+degree of supersymmetry.
+There are several reasons for this choice
+\begin{itemize}
+  \item Gauge hierarchy problem.
+  \item As a way to solve the equations of motion.
+  \item It gives a nice phenomenological description.
+
+    A four dimensional theory with $\mathcal N=1$ supersymmetry allows for massless fermions
+    that transform in a complex representation of the gauge group associated to the supersymmetry.
+    Since $\mathcal N\geq 2$ in four dimensions all fermions must transform in a real representation 
+    of the gauge group, we shall only consider the case $\mathcal N=1$.
+
+    \todoin{Understand the reason for different possible representations.}
+\end{itemize}
+
+\todoin{Understand the meaning of SUSY parameter.}
+Every supersymmetry transformation is parametrized by an infinitesimal parameter $\eta_\alpha (X)$
+which has an associated conserved supercharge $Q$ at every space-time point.
+
+\todoin{Fill in the proof. We translate field equations into operator equations.}
+A conserved charge $Q$ associated to an unbroken supersymmetry annihilates the vacuum $\ket{\Omega}$,
+so $Q\ket{\Omega}=0$, since
+This in turn means that for any operator $U$, $\ev{ \{Q,U\} }{\Omega}=0$.
+\begin{equation}
+  U' = U+\delta U = e^{-iQ\eta} U e^{iQ\eta} = (1 + iQ\eta) U (1- iQ\eta) = \cdots
+\end{equation}
+If $U$ is a fermionic operator, we derive that the variation of the operator under the supersymmetry
+transformation is $\delta U = \{ Q, U\}$.
+Taking this as the classical limit, $\delta U = \ev{\delta U}{\Omega}$.
+Thus, we conclude that at tree level $\delta U = 0$ for any fermionic field $U$.
+\todoin{What is really $U$?. Read about tree level.}
+
+\todoin{Read some details on how to obtain this. Fill in the gaps. Check the implication direction.}
+The low energy spectrum of a ten-dimensional theory has as elementary fermions the gravitino $\psi_M$,
+the dilatino $\lambda$ and the gluino $\xi$.
+Their variation is
+\begin{equation}
+  \begin{align}
+  \delta \psi_M &= \frac{1}{\kappa }D_M \eta + \frac{\kappa}{32g^2 \phi}(\Gamma_M^{NPQ} - 9\delta^N_M \Gamma^{PQ})\eta H_{NPQ} + (\mathrm{Fermi})^2 \\
+  \delta \xi^a &= -\frac{1}{4g\sqrt \phi} \Gamma^{MN} F^a_{MN} \eta + (\mathrm{Fermi})^2 \\
+  \delta \lambda &=- \frac{1}{\sqrt 2 \phi}(\Gamma \partial \phi)\eta + \frac{\kappa}{8\sqrt 2 g^2 \phi} \Gamma^{MNP} \eta H_{\mnp} + (\mathrm{Fermi})^2
+  \end{align}
+\end{equation}
+
+Supersymmetry preservation means that all variations must be zero. 
+For convenience, we set $H=0$ and $\phi=\mathrm{const.}$ .
+This leads to the constraints
+\begin{equation}
+  \begin{align}
+  \delta \psi_M &= \frac{1}{\kappa }D_M \eta\\ 
+  \delta \xi^a &= -\frac{1}{4g\sqrt \phi} \Gamma^{MN} F^a_{MN} \eta 
+  \end{align}
+\end{equation}
+
+The first equation implies that there exists $[D_M,D_N]\eta=0$ $R_{MNPQ} \Gamma^{PQ} \eta$.
+If we particularize to $T$, which is a maximally symmetric space, the second equation imposes that
+$T$ is Minkowski space, which is not surprising.
+Cosmological constant blah, blah, blah.
+We can now use the first equation to conclude that $\eta$ does not depend on the uncompactified 
+coordinates,  $\partial_T \eta=0$.
+
+\todoin{\url{https://groups.google.com/forum/#!topic/sci.physics.research/rrBoIXk9Rw0}}
+We proceed to examine what the existence of a covariantly constant spinor field imposes on the compact space. 
+
+Let us consider a Riemannian manifold $K$ of dimension $n$ with a spin connection $\omega$, which 
+is in general a $SO(n)$ gauge field.
+If we parallel transport a field $\psi$ around a contractible closed curve $\gamma$, the field becomes
+$U\psi$ where $U=\mathcal P e^{\int_\gamma dx \omega}$, where $\mathcal P$ is the path-ordered product.
+
+The set of the transformation matrices associated to all possible loops form the holonomy group of the manifold, 
+which must be a subgroup of $SO(n)$.
+
+\todoin{Fill in Group Theory discussion}
+
+We now consider how the $SU(3)$ holonomy translates into the manifold. 
+
+\todoin{Fill in Group Theory discussion}
+
+The only  $U(3)$ invariants in the $\mathbf{6}$ representation of $SO(6)$ are the identity and
+$\bar I$.
+
+\todoin{Check the different spaces we consider.}
+We can also form a tensor field on $K$ of the type $J^i_j(y)=g^{ik}(y) \bar\eta \Lambda_{kj} \eta(y)$.
+For each point $y$, we can consider $J^i_j$ as a matrix that acts on the tangent space, so $v^i \to J^i_j v^j$.
+In this sense, $J^i_j$ is a real, traceless and $SU(3)$ invariant matrix, which means that it must be proportional
+to $\bar I$.
+We had already seen that $\bar I = -I$, this an example of an almost-complex structure, which is 
+a tensor field $J$ that satisfies $J^2=-I$.
+
+If we employ complex coordinates, we can diagonalize $J$ so that the non-zero components are
+$J^a_b=i\delta^a_b$ and $J^{\bar a}_{\bar b}=-i\delta^{\bar a}_{\bar b}$. This particular choice
+is know as the canonical form.
+
+\todoin{Complex structure stuff}
+
+\todoin{Nijenhuis tensor}
+
+\begin{equation}
+  N^k_{ij}= J^l_i(\partial_l J^k_j - \partial_j J^k_l) - J_j^l (\partial_l J^k_i - \partial_i J^k_l)
+\end{equation}
+
+$N=0$
+
+\todoin{Coordinate definition of complex manifold}
+
+
+
+
+INTRODUCE NON-ABELIAN GAUGE BOSONS
