@@ -10,6 +10,9 @@ ROLE OF COMPACTIFICATION
 
 TYPES OF COMPACTIFICATIONS (Green, Uranga)
 
+In the following section we motivate the requirement that additional dimensions are compactified
+over a Calabi-Yau manifold (a complex manifold of $SU(3)$ holonomy).
+
 %It is well known that any physical theory that describes our universe must allow for chiral 
 %fermions.
 %The are several ways to compactify a string theory in order to obtain chirality.
@@ -114,6 +117,8 @@ We now consider how the $SU(3)$ holonomy translates into the manifold.
 The only  $U(3)$ invariants in the $\mathbf{6}$ representation of $SO(6)$ are the identity and
 $\bar I$.
 
+\subsection{U(3) holonomy implies complex manifold}
+
 \todoin{Check the different spaces we consider.}
 We can also form a tensor field on $K$ of the type $J^i_j(y)=g^{ik}(y) \bar\eta \Lambda_{kj} \eta(y)$.
 For each point $y$, we can consider $J^i_j$ as a matrix that acts on the tangent space, so $v^i \to J^i_j v^j$.
@@ -126,20 +131,28 @@ If we employ complex coordinates, we can diagonalize $J$ so that the non-zero co
 $J^a_b=i\delta^a_b$ and $J^{\bar a}_{\bar b}=-i\delta^{\bar a}_{\bar b}$. This particular choice
 is know as the canonical form.
 
-\todoin{Complex structure stuff}
 
-\todoin{Nijenhuis tensor}
+
+It is always possible to choose particular coordinates to bring $J$ to the canonical form at a particular 
+point.
+But in general, the canonical form will not hold at an open neighborhood of a point.
+If a manifold admits a set of coordinates (called local holomorphic coordinates) such that at every
+point, the canonical form holds for an open neighborhood, then the almost complex structure is integrable.
+
+The necessary and sufficient condition for integrability is that the Nijenhuis tensor
 
 \begin{equation}
   N^k_{ij}= J^l_i(\partial_l J^k_j - \partial_j J^k_l) - J_j^l (\partial_l J^k_i - \partial_i J^k_l)
 \end{equation}
 
-$N=0$
+vanishes.
+An integrable almost-complex structure is a complex structure and a manifold with a complex structure
+is a complex manifold.
 
 \todoin{Coordinate definition of complex manifold}
 
 
-\todoin{Kahler form}
+
 
 
 ORIENTIFOLD PLANES AND D-BRANES
@@ -161,8 +174,6 @@ projection, which consists in modding out $\Omega \mathcal R$.
 
 \subsection{D6-branes in flat 10d space}
 
-\todoin{Configurations of branes}
-
 In order to obtain chiral 4d fermions, two D6-branes in flat 10d can intersect over a 4d region.
 The open string spectrum of an intersection of a stack of $N_1$ D6-branes and a stack of $N_2$ D6-branes
 can be classified as:
@@ -177,6 +188,7 @@ can be classified as:
 
 \subsection{D6-branes on a torus}
 
+Let us consider type IIA theory compactified on a 6-torus $T^6=T^2 \times T^2 \times T^2$.
 
 \subsection{D6-branes on a Calabi-Yau}
 In order to obtain stable D6-brane configurations, we impose that they wrap around volume 
