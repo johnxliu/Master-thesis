@@ -1,38 +1,31 @@
 \chapter{D6-branes on Calabi-Yau manifolds}
 
-TYPES OF STRING THEORIES
+\subsection{Types of string theories}
 
 
-
-ROLE OF COMPACTIFICATION
-
-
-
-TYPES OF COMPACTIFICATIONS (Green, Uranga)
+\subsection{Compactification}
 
 In the following section we motivate the requirement that additional dimensions are compactified
-over a Calabi-Yau manifold (a complex manifold of $SU(3)$ holonomy).
+over a Calabi-Yau manifold (a compact complex manifold of $SU(3)$ holonomy).
 
 %It is well known that any physical theory that describes our universe must allow for chiral 
 %fermions.
 %The are several ways to compactify a string theory in order to obtain chirality.
 
-We assume that the manifold is factorizable into a four-dimensional space and the compact space
+
+We assume that the manifold is factorizable into a four-dimensional space-time $N$ and a compact space $K$,
 $\mathcal M =  N\times K$.
 
-\todoin{TIIA or TIIB?}
-\todoin{For what theories is the following reasoning exactly valid.}
+\todoin{Do we need $N$ to be maximally symmetric.}
 
-\todoin{Reason for N=1, chirality or th other reasons. I think N=something for other reasons and
-N=1 for chirality.
-}
-
-Out of the possible ways to compactify a theory, we pick out the ones that preserve some
+Out of all the possible ways to compactify a theory, we pick out the ones that preserve some
 degree of supersymmetry.
-There are several reasons for this choice
+There are several reasons for this choice:
 \begin{itemize}
   \item Gauge hierarchy problem.
+    \todoin{Is it relevant today?}
   \item As a way to solve the equations of motion.
+    \todoin{What does this mean? A SUSY configurations satisfies the eom -> SUGRA. Classically?}
   \item It gives a nice phenomenological description.
 
     A four dimensional theory with $\mathcal N=1$ supersymmetry allows for massless fermions
@@ -41,11 +34,12 @@ There are several reasons for this choice
     of the gauge group, we shall only consider the case $\mathcal N=1$.
 
     \todoin{Understand the reason for different possible representations.}
+    \todoin{Does this mean that at higher energies there are no chiral fermions?}
 \end{itemize}
 
-\todoin{Understand the meaning of SUSY parameter.}
+\todoin{Understand the meaning of SUSY parameter. How does it exponentiate.}
 Every supersymmetry transformation is parametrized by an infinitesimal parameter $\eta_\alpha (X)$
-which has an associated conserved supercharge $Q$ at every space-time point.
+which is anti-commuting, two-component Weyl fermion that has an associated conserved supercharge $Q$ at every space-time point.
 
 \todoin{Fill in the proof. We translate field equations into operator equations.}
 A conserved charge $Q$ associated to an unbroken supersymmetry annihilates the vacuum $\ket{\Omega}$,
@@ -63,6 +57,7 @@ Thus, we conclude that at tree level $\delta U = 0$ for any fermionic field $U$.
 \todoin{Read some details on how to obtain this. Fill in the gaps. Check the implication direction.}
 The low energy spectrum of a ten-dimensional theory has as elementary fermions the gravitino $\psi_M$,
 the dilatino $\lambda$ and the gluino $\xi$.
+\todoin{This is 10d N=1 SUGRA}
 Their variation is
 \begin{equation}
   \begin{align}
@@ -151,9 +146,15 @@ is a complex manifold.
 
 \todoin{Coordinate definition of complex manifold}
 
+\subsection{SU(3) implies vanishing first Chern class}
+\todoin{Probably not necessary}
+
+\subsection{If we want chirality we need SU(3) exactly}
 
 
+\subsection{Moduli space}
 
+\todo{Read about the manifold they form}
 
 ORIENTIFOLD PLANES AND D-BRANES
 
@@ -174,7 +175,10 @@ projection, which consists in modding out $\Omega \mathcal R$.
 
 \subsection{D6-branes in flat 10d space}
 
-In order to obtain chiral 4d fermions, two D6-branes in flat 10d can intersect over a 4d region.
+We have seen that if we compactify an heterotic string theory on a Calabi-Yau manifold, we obtain
+$\mathcal N=1$ which allows chirality. 
+This is not the case of Type II theories, which lead to $\mathcal N=2$.
+In order to reduce the degree of supersymmetry and thus obtain chiral 4d fermions, two D6-branes in flat 10d can intersect over a 4d region.
 The open string spectrum of an intersection of a stack of $N_1$ D6-branes and a stack of $N_2$ D6-branes
 can be classified as:
 
@@ -207,3 +211,5 @@ The volume of the special Lagrangian 3-cycle is
 
 
 INTRODUCE NON-ABELIAN GAUGE BOSONS
+
+\subsection{Model building}
