@@ -8,40 +8,57 @@
 In the following section we motivate the requirement that additional dimensions are compactified
 over a Calabi-Yau manifold (a compact complex manifold of $SU(3)$ holonomy).
 
-%It is well known that any physical theory that describes our universe must allow for chiral 
-%fermions.
-%The are several ways to compactify a string theory in order to obtain chirality.
-
-
-We assume that the manifold is factorizable into a four-dimensional space-time $N$ and a compact space $K$,
+We assume that the manifold $\mathcal M$ is factorizable into a four-dimensional maximally symmetric space-time $N$ and a six-dimensional compact space $K$,
 $\mathcal M =  N\times K$.
-
-\todoin{Do we need $N$ to be maximally symmetric.}
 
 Out of all the possible ways to compactify a theory, we pick out the ones that preserve some
 degree of supersymmetry.
-There are several reasons for this choice:
-\begin{itemize}
-  \item Gauge hierarchy problem.
-    \todoin{Is it relevant today?}
-  \item As a way to solve the equations of motion.
-    \todoin{What does this mean? A SUSY configurations satisfies the eom -> SUGRA. Classically?}
-  \item It gives a nice phenomenological description.
+%There are several reasons for this choice:
+%\begin{itemize}
+%%  \item Gauge hierarchy problem.
+%%    \todoin{Is it relevant today?}
+%  \item As a way to solve the equations of motion.
+%    \todoin{What does this mean? A SUSY configurations satisfies the eom -> SUGRA. Classically?}
+%  \item It gives a nice phenomenological description.
+%
+%    A four dimensional theory with $\mathcal N=1$ supersymmetry allows for massless fermions
+%    that transform in a complex representation of the gauge group associated to the supersymmetry.
+%    Since $\mathcal N\geq 2$ in four dimensions all fermions must transform in a real representation 
+%    of the gauge group, we shall only consider the case $\mathcal N=1$.
+%
+%    \todoin{Understand the reason for different possible representations.}
+%    \todoin{Does this mean that at higher energies there are no chiral fermions?}
+%\end{itemize}
+Our main reason for this choice is that they provide a nice way to obtain realistic particle 
+physics models. 
+In particular, we will see that an $\mathcal N=1$ supersymmetric theory allows for chiral fermions.
+In addition, supersymmetric configurations are easier to study before tackling more general compactifications.
 
-    A four dimensional theory with $\mathcal N=1$ supersymmetry allows for massless fermions
-    that transform in a complex representation of the gauge group associated to the supersymmetry.
-    Since $\mathcal N\geq 2$ in four dimensions all fermions must transform in a real representation 
-    of the gauge group, we shall only consider the case $\mathcal N=1$.
+The supersymmetry condition means there is a transformation the relates fermions to bosons, and
+vice versa.
 
-    \todoin{Understand the reason for different possible representations.}
-    \todoin{Does this mean that at higher energies there are no chiral fermions?}
-\end{itemize}
+Superspace
+Roughly, extend a Poincaré algebra to in supersymmetry generators which satisfy specific 
+anti-commutation relations, instead of commutation relations
+\begin{equation}
+  \{ Q, Q\} = \{\bar Q,\bar Q} = 0, \{Q, \bar Q}=
+\end{equation}
 
-\todoin{Understand the meaning of SUSY parameter. How does it exponentiate.}
-Every supersymmetry transformation is parametrized by an infinitesimal parameter $\eta_\alpha (X)$
-which is anti-commuting, two-component Weyl fermion that has an associated conserved supercharge $Q$ at every space-time point.
+A finite SUSY transformation is
+\begin{equation}
+  e^{i(\eta Q+ \bar \eta \bar Q - x_\mu p^\mu)}
+\end{equation}
+
+Every supersymmetry transformation is parametrized by an infinitesimal parameter $\eta_\alpha (X)$,
+so that 
+\begin{equation}
+  \delta \ket{boson} = \ket{fermion} 
+\end{equation}
+\todoin{Insert definition of $\eta$. Is it a Grassmann variable, a spinor, an operator\ldots}
+%which is anti-commuting, two-component Weyl fermion that has an associated conserved supercharge $Q$ at every space-time point.
 
 \todoin{Fill in the proof. We translate field equations into operator equations.}
+\todoin{What is the relation of the charge to the full SUSY transformation.} 
 A conserved charge $Q$ associated to an unbroken supersymmetry annihilates the vacuum $\ket{\Omega}$,
 so $Q\ket{\Omega}=0$, since
 This in turn means that for any operator $U$, $\ev{ \{Q,U\} }{\Omega}=0$.
@@ -54,39 +71,50 @@ Taking this as the classical limit, $\delta U = \ev{\delta U}{\Omega}$.
 Thus, we conclude that at tree level $\delta U = 0$ for any fermionic field $U$.
 \todoin{What is really $U$?. Read about tree level.}
 
-\todoin{Read some details on how to obtain this. Fill in the gaps. Check the implication direction.}
-The low energy spectrum of a ten-dimensional theory has as elementary fermions the gravitino $\psi_M$,
-the dilatino $\lambda$ and the gluino $\xi$.
-\todoin{This is 10d N=1 SUGRA}
-Their variation is
+The low-energy theory of the ten-dimensional type IIA string theory is type IIA SUGRA, which although it has
+$\mathcal N=2$ instead of $\mathcal N=1$, we will see a workaround. 
+The type IIA string theory has as NS-NS fields the dilaton $\phi$, the metric $G$ and the two-form field $B$.
+In the RR sector we have the one-form and three-form, $c_1$ and $c_3$.
+For convenience, we define employ the democratic formulation
+\todoin{Understand democratic formulation}
+We also define the field strength of the NS form $H=dB$ and the $F^{10)}$ as the formal sum
 \begin{equation}
-  \begin{align}
-  \delta \psi_M &= \frac{1}{\kappa }D_M \eta + \frac{\kappa}{32g^2 \phi}(\Gamma_M^{NPQ} - 9\delta^N_M \Gamma^{PQ})\eta H_{NPQ} + (\mathrm{Fermi})^2 \\
-  \delta \xi^a &= -\frac{1}{4g\sqrt \phi} \Gamma^{MN} F^a_{MN} \eta + (\mathrm{Fermi})^2 \\
-  \delta \lambda &=- \frac{1}{\sqrt 2 \phi}(\Gamma \partial \phi)\eta + \frac{\kappa}{8\sqrt 2 g^2 \phi} \Gamma^{MNP} \eta H_{\mnp} + (\mathrm{Fermi})^2
-  \end{align}
+  F^{10)}=dC-H\wedge C+me^B
+\end{equation}
+where $C$ is the formal sum of odd differential form fields.
+\todoin{What is m?}
+\begin{equation}
+  F^{10)}_n = (-1)^{\floor{n/2}}\star F^{10)}_{10-n}
 \end{equation}
 
-Where the Dirac matrices for the ten-dimensional space time are
+Type IIA SUGRA has as elementary fermions two Majora-Weyl gravitinos of the same chirality $\psi_M$ and two dilatinos $\lambda$. 
+Their variation under a supersymmetry transformation is
 \begin{equation}
-  \Gamma^M = e^M_A \Gamma^A.
+    \delta \psi_M = D_M \eta + \frac{1}{4}\slashed H_M \Gamma_{11} \eta + \frac{1}{16}e^\phi \sum_n \slashed F^{10)}_n \Gamma_M \Gamma_{11}^{n/2)} \sigma^1 \eta
 \end{equation}
-Here $e^M_A$ denotes the vielbein that describes the graviton and $\Gamma^A$ are elements of a 
-Clifford algebra, so $\{\Gamma^A,\Gamma^B}=2\eta^{AB}$.
-\todoin{Wtf is $\Gamma$?}
+
+Where $H=dB$ is the field strength of the antisymmetric two-form $B$.
+$\slashed{F}_n^{10)} = \frac{1}{n!}F_{P_1\ldots P_N}\Gamma^{P_1\ldots P_N}$ and
+$\slashed H_M= \frac{1}{2} H_{MNP} \Gamma^{NP}$.
+The $\Gamma$ $\sigma^1$
+\todoin{
+  Where the Dirac matrices for the ten-dimensional space time are
+  $\Gamma^M = e^M_A \Gamma^A.$
+   Here $e^M_A$ denotes the vielbein that describes the graviton and $\Gamma^A$ are elements of a 
+Clifford algebra, so $\{\Gamma^A,\Gamma^B\}=2\eta^{AB}$.
+}
 
 Supersymmetry preservation means that all variations must be zero. 
 For convenience, we set $H=0$ and $\phi=\mathrm{const.}$ .
-This leads to the constraints
+This leads to the constraint that $\eta$ is a covariantly constant spinor
 \begin{equation}
-  \begin{align}
-  \delta \psi_M &= \frac{1}{\kappa }D_M \eta\\ 
-  \delta \xi^a &= -\frac{1}{4g\sqrt \phi} \Gamma^{MN} F^a_{MN} \eta 
-  \end{align}
+  \delta \psi_M &= D_M \eta = 0
+%  \delta \xi^a &= -\frac{1}{4g\sqrt \phi} \Gamma^{MN} F^a_{MN} \eta 
 \end{equation}
 
-The first equation implies that there exists $[D_M,D_N]\eta=0$ $R_{MNPQ} \Gamma^{PQ} \eta$.
-If we particularize to $T$, which is a maximally symmetric space, the second equation imposes that
+\todoin{Why this cov der.}
+The equation implies that there exists $[D_M,D_N]\eta=R_{MNPQ} \Gamma^{PQ} \eta=0$.
+If we particularize to $T$, which is a maximally symmetric space, the last equation imposes that
 $T$ is Minkowski space, which is not surprising.
 Cosmological constant blah, blah, blah.
 We can now use the first equation to conclude that $\eta$ does not depend on the uncompactified 
@@ -98,7 +126,7 @@ We proceed to examine what the existence of a covariantly constant spinor field 
 Let us consider a Riemannian manifold $K$ of dimension $n$ with a spin connection $\omega$, which 
 is in general a $SO(n)$ gauge field.
 If we parallel transport a field $\psi$ around a contractible closed curve $\gamma$, the field becomes
-$U\psi$ where $U=\mathcal P e^{\int_\gamma dx \omega}$, where $\mathcal P$ is the path-ordered product.
+$U\psi$ where $U=\mathcal P e^{\int_\gamma dx \omega}$, where $\mathcal P$ is the path-ordered product (complete).
 
 The set of the transformation matrices associated to all possible loops form the holonomy group of the manifold, 
 which must be a subgroup of $SO(n)$.
@@ -154,7 +182,16 @@ is a complex manifold.
 
 \subsection{Moduli space}
 
-\todo{Read about the manifold they form}
+
+\todoin{Calabi-Yau definition: SU(n) global holonomy<->non-vanishing n-form -> vanishing first Chern class <->vanishing Ricci curvature<->local 
+SU(n) holonomy. If simply connnected, both definitions are equivalent.}
+We start from a complex manifold with a metric st. it is a Calabi-Yau manifold.
+We then deform it's metric while it remains CY
+
+
+Given a Calabi-Yau manifold with a particular complex structure and metric, we could ask ourselves
+when the deformations
+
 
 ORIENTIFOLD PLANES AND D-BRANES
 
@@ -164,8 +201,8 @@ ORIENTIFOLD PLANES AND D-BRANES
 If we compactify a Type II string theory on a Calabi-Yau manifold, we  obtain a four-dimensional
 $\mathcal N=2$ supersymmetric theory.
 In order to allow for chirality, we must obtain a $N=1$ theory. This can be done through the orientifold
-projection, which consists in modding out $\Omega \mathcal R$.
-\todoin{Couldn't we start from a modded out manifold? It seems there is more than geometry here.}
+projection, which consists in modding out $\Omega \mathcal R$ acting on the 10d manifold, 
+where $\Omega$ is the worldsheet parity and $\mathcal R$ is a particular $\mathbb Z_2$ symmetry.
 
 
 \todoin{Understand RR charges.}
@@ -179,11 +216,14 @@ We have seen that if we compactify an heterotic string theory on a Calabi-Yau ma
 $\mathcal N=1$ which allows chirality. 
 This is not the case of Type II theories, which lead to $\mathcal N=2$.
 In order to reduce the degree of supersymmetry and thus obtain chiral 4d fermions, two D6-branes in flat 10d can intersect over a 4d region.
+Before considering D6-branes over a Calabi-Yau compactification, we consider the flat space
+case.
+
 The open string spectrum of an intersection of a stack of $N_1$ D6-branes and a stack of $N_2$ D6-branes
 can be classified as:
 
 \begin{itemize}
-  \item Strings stretching from one stack to itself, which lead to 7d $U(N_i)$ gauge boson, three real
+  \item Strings stretching from one stack to itself, which lead to 7d $U(N_i)$ gauge bosons, three real
     adjoint scalars and their fermion superpartners, .
   \item String that go from one stack to the other are localized at the intersection. 
     Their associated fields are are charged under the bi-fundamental representation $(N_1, \bar N_2)$ of 
