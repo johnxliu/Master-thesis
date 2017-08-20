@@ -8,23 +8,23 @@ In this thesis we will only work with the supersymmetric type IIA theory.
 
 \subsection{TIIA spectrum}
 Type IIA string theory requires ten space-time dimensions to be consistent.
-The flat 10 dimensional space-time bosinic spectrum of type IIA can be classified according to
+Furthermore, it has a 10-dimensional supersymmetry with 32 supercharges, which corresponds to $\mathcal N=(1,1)$.
+The flat 10-dimensional space-time bosonic spectrum of type IIA can be classified according to
 the boundary conditions of the strings, whether we consider Ramond (R) or Neveu–Schwarz (NS) conditions.
 In the NS-NS sector, we have the dilaton $\phi$, a two-form $B_2$ and a graviton $G_{\mu\nu}$,
 while in the R-R sector we have the 1- and 3-forms $c_1, c_3$.
 The fermions, which belong to the NS-R and R-NS sectors, are two opposite-chirality gravitinos $\psi$ and two opposite-chirality dilatinos $\lambda$.
 %This is the perturbative spectrum around the vacuum, which is made of closed strings only. 
 
-\subsection{D-brane introduction}
+\subsection{The D-brane}
 
 A generalization of strings are D$p$-branes, which are $p$-dimensional extended objects.
 Thus, a D$1$-brane would correspond to a string, a D$2$-brane would be a membrane and so on.
 The existence of D$p$-branes can be motivated, in the weak coupling limit, as 
 objects where open strings end, so they are a way to impose Dirichlet boundary conditions on open strings.
 In fact, D-branes should be though as new non-perturbative states in their own right.
-\todoin{More subtle than this. In perturbative regime branes are fully described in terms of strings. f-strings, T and S dualities 
-
-lead to a more democratic formulation.}
+\todoin{Might remove last line. More subtle than this. In perturbative regime branes are fully described in terms of strings. f-strings, T and S dualities 
+lead to a more democratic formulation in non-perturbative regime.}
 
 We can study the dynamics of a D$p$-branes in terms of the dynamics of open strings with endpoints
 attached to the D$p$-brane.
@@ -33,33 +33,30 @@ The presence of the D$p$-brane breaks the ten-dimensional Poincaré invariance o
 particles propagate on the $(p+1)$-dimensional volume of the D$p$-brane only.
 This implies that massless particles must transform under irreducible representations of $SO(p-2)$, instead of
 $SO(d-2)$.
-The massless spectrum in $(p+1)$ dimensions of the open string theory is composed by a gauge boson $A^\mu$ ($\mu=0,\ldots,p$),
-$9-p$ real scalars $\phi^i$ and some fermions $\lambda_a$.
+The massless spectrum in $(p+1)$ dimensions of the open string theory is composed by a gauge boson $A^\mu$ ($\mu=0,\ldots,p$) (corresponding
+to transverse oscillations to the brane),
+$9-p$ real scalars $\phi^i$ (corresponding to longitudinal oscillations to the brane) and some fermions $\lambda_a$.
 This particle content can be arranged into a vector supermultiplet of $U(1)$ with $16$ supersymmetries
 in $(p+1)$ dimensions. 
 Thus, a D$p$-brane reduces the degree of supersymmetry of the type IIA theory by half.
 
-\todoin{Branes supported on sLag cycles represent BPS states}
-
 In order to find out the action of a D$p$-brane we must realize that it corresponds to the
 $(p+1)$-dimensional effective action of the massless open string excitations of the D$p$-brane.
-Since a D$p$-brane breaks the translational symmetry of the vacuum, Goldstone bosons
-vev of the scalar fields determine the position of the D$p$-brane, and the fluctuations of the scalar
-fields determine the dynamics of the D$p$-brane.
+As an illustration of this, a D$p$-brane breaks the translational symmetry of the vacuum, which allows
+us to conclude that the $\phi^i$ scalar fields are the Goldstone bosons associated to the broken symmetry. 
+The vev of these scalar fields determine the position of the D$p$-brane in the transverse space, and the fluctuations of the scalar
+fields determine the evolution of the D$p$-brane wordlvolume $W_{p+1}$ (the worldline of a particle generalization to the case of branes). 
 The resulting action of the bosonic sector of the D$p$-brane is the sum of a Dirac-Born-Infeld term $S_{DBI}$ and a Chern-Simons term $S_{CS}$.
-\todoin{Complete}
 
 The DBI term carries the information of how a D$p$-brane interacts with the NSNS fields. 
 It takes the form
 
 \begin{equation}
-  S_{DBI}= -\frac{\alpha'^{-(p+1)/2}}{(2\pi)^p}\int_{W_{p+1}}  d^{p+1}x f(\phi^i, A^\mu, G_{\mu\nu}, B_2)
+  S_{DBI}= -\frac{\alpha'^{-(p+1)/2}}{(2\pi)^p}\int_{W_{p+1}}  d^{p+1}x f(\phi^i, A^\mu, G_{\mu\nu}, B_2, \phi)
 \end{equation}
 
-where the precise expression of $f$ is unimportant to us.
+where the precise expression of $f$ is unimportant for the purposes of this work.
 \todoin{What is the background here and what is dynamical? BG: closed string fields and Dynamical: open string fields?}
-
-
 
 %\begin{equation}
 %  S_{DBI}= -\frac{\alpha'^{-(p+1)/2}}{(2\pi)^p} \int d^{p+1} x e^{-\phi} \sqrt{-\det(P\qty[G+B]-2\pi \alpha'F)}
@@ -85,10 +82,13 @@ g^2_{YM} = g_s \alpha'^{(p-3)/2}(2\pi)^{p-2}
 
 The Chern-Simons term is topological in nature and describes how D$p$-branes interact with RR-fields.
 %Which means that D$p$-branes are carry RR charge.
+\todoin{Anything more to add?}
 
 %\begin{equation}
 %S_{CS}= \mu_p \int P[\sum_p c_q]\wedge e^{2\pi\alpha F_2 -B_2}\wedge \hat A (R)
 %\end{equation}
+
+\subsection{Multiple D-branes}
 
 It is convenient to generalize the single D$p$-brane configuration to $N$ parallel D$p$-branes.
 In order to determine the spectrum of a stack of D$p$-branes, we consider open strings with endpoints 
@@ -100,23 +100,37 @@ The massless spectrum is composed of $(p-1)$-dimensional $U(n)$ gauge bosons, $(
 scalars in the adjoint representation and several fermions in the adjoint representation.
 
 If all branes are separated from each other, strings that stretch from a brane to itself correspond to massless gauge bosons that belong to $U(1)^N$ .
-In contrast, strings that stretch from one brane to another lead to massive particles whose
-mass increases with the distance between branes.
-The lightest of these particles have opposite charges with respect to the $U(1)$ of each brane.
-\todoin{Maybe mention orientation}
+In contrast, strings that stretch from one brane $A$ to another brane $B$ lead to massive particles whose
+masses increases with the distance between branes.
+The lightest of these particles have opposite have charge $(1,-1)$ under $U(1)_A \times U(1)_B$.
+Since Type IIA strings carry an orientation, string that stretch from $B$ to $A$ would have opposite charges.
 
-\subsection{Intersecting branes}
-\todoin{Reorganize}
-In our work, D6-branes are interesting because they are used as a basis to obtain 4d chiral fermions.
-A basic configuration of two stacks of D6-branes that intersect over a 4d subspace of their volumes.
+Let us now suppose D$p$-branes which are not parallel, so they can intersect each other.
+This situation is relevant because in the case of D6-branes, it leads to 4-dimensional chiral fermions.
+We are interested in describing the open string spectrum of two stacks of D$6$-branes that intersect over a 4-dimensional subspace of their volumes.
 
-Strings that stretch from a coincident stack of $N$ D6-branes lead to 7d $U(N)$ gauge bosons, three real adjoint scalars and their fermion superpartners.
+Strings that stretch from a coincident stack of $N$ D6-branes to itself lead to 7-dimensional $U(N)$ gauge bosons, three real adjoint scalars and their fermion superpartners.
 
-String that stretch from a stack of $N_1$ D6-branes to another stack $N_2$ are localized at the interesection,
+String that stretch from a stack of $N_1$ D6-branes to another stack of $N_2$ D6-branes are localized at the intersection,
 in order to minimize their energy. 
-They lead to a 4d fermion charged in the $(\mathbf{N_1},\mathbf{N_2})$ of $U(N_1)\times U(N_2)$.
+They lead to a 4-dimensional fermion charged in the $(\mathbf{N_1},\mathbf{N_2})$ of $U(N_1)\times U(N_2)$ or its conjugate, depending on the orientation
+of the intersection.
 
-\todoin{SUSY condition}
+Not all geometric configurations preserve supersymmetry. 
+Let us decompose space-time as $M_4 \times \mathbb R^2 \times \mathbb R^2 \times \mathbb R^2 $.
+The D6-branes span all $M_4$ and a line in each $\mathbb R^2$ plane, such that the angle between
+two stacks is given by $\theta_i$ for each plane.
+It can be shown that the condition $\theta_1\pm\theta_2\pm\theta_3=0 (\mathrm{mod} 2\pi)$ implies $\mathcal N=1$ 
+supersymmetry in 4 dimensions, provided that no angle vanishes.
+If some of the angles vanish, the supersymmetry would we enhanced.
+
+The reason we have used D6-branes and no other dimension of D$p$-branes is that they would not lead to chiral fermions in 4 dimensions.
+Intuitively, two D6-branes allow to define an orientation in the transverse 6-dimensional space, which would not be possible
+with two other type of D$p$-branes.
+\todoin{So have we seen that no Calabi-Yau is needed to obtain 4d chiral fermions if we consider a theory with intersecting 
+D6-branes? Of course, we still would have to cancel RR charges in some way.}
+
+\todoin{Add tadpole cancellation here?}
 
 %\todoin{RR-sector -> RR-tadpole cancellation?}
 %
@@ -128,8 +142,5 @@ They lead to a 4d fermion charged in the $(\mathbf{N_1},\mathbf{N_2})$ of $U(N_1
  
 The low-energy theory of the ten-dimensional type IIA string theory is type IIA SUGRA.
 The spectrum of Type IIA SUGRA has as elementary fermions, which belong to the massless spectrum (NS-R and R-NS) of type IIA theory,
-two Majora-Weyl gravitinos of the same chirality $\psi_M$ and two dilatinos $\lambda$. 
-\todoin{Complete bosons}
-
-32 supersymmetries $\mathcal N=(1,1)$ in ten dimensions
-
+two Majorana-Weyl gravitinos of the same chirality $\psi_M^a$ and two dilatinos $\lambda^a$. 
+\todoin{Isn't the spectrum the same as the high-energy TIIA? Might not need to mention SUGRA here then.}
