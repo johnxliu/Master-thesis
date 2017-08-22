@@ -202,7 +202,7 @@ It can be shown that the holonomy group being contained in $U(N)$ implies that t
 
 %\todoin{Coordinate definition of complex manifold}
 
-\subsection{Algebraic geometry}
+\subsection{Cohomology}
 
 It is useful to introduce some algebraic topology tools.
 
@@ -244,13 +244,15 @@ The $q$-th deRham cohomology group is defined as the quotient
   H^q_d(X,\mathbb R)=\qty{\omega| d\omega=0}/\qty{\alpha|\alpha=d\beta}
 \end{equation}
 
+dimension Betti number
+
 DOLBEAULT COHOMOLOGY
 
 We can easily make a generalization of the previous concepts to complex manifolds.
 $\bar\partial$
 \begin{equation}
   H^{r,s}_{\bar \partial }(X,\mathbb C)=\qty {\omega | \bar \partial \omega= 0}/\qty{\alpha|\alpha=\bar\partial \beta}
-\end{equation}<++>
+\end{equation}
 
 HODGE DECOMPOSITION / HODGE NUMBERS
 
@@ -267,19 +269,24 @@ The dimension of $H^{p,q}$ is know as the Hodge number, $h_{p,q}$ and it is a to
 For Calabi-Yau manifolds, $h_{d,0}=1$
 $h_{p,q}=h_{d-p,d-q}$ mirror symmetry
 
-HOMOLOGY / INTERSECTION NUMBERS
+Hodge symmetry $h_{p,q}=h_{q,p}$
+
+\subsection{Homology}
 
 A very related construction to cohomology is homology.
 The basic element of homology is the $p$-chain
 
-
 algebraic dual, in the sense that
 
-MODULI SPACE
+
+Poincaré duality 
+
+
+\subsection{Moduli space}
 %
 %
 %\todoin{Calabi-Yau definition: SU(n) global holonomy<->non-vanishing n-form -> vanishing first Chern class <->vanishing Ricci curvature<->local 
-%SU(n) holonomy. If simply connnected, both definitions are equivalent.}
+%SU(n) holonomy. If simply connected, both definitions are equivalent.}
 %We start from a complex manifold with a metric st. it is a Calabi-Yau manifold.
 %We then deform it's metric while it remains CY
 %
@@ -288,63 +295,77 @@ MODULI SPACE
 %when the deformations
 
 
+\subsection{TIIA spectrum on CY}
 
 \section{Type IIA on orientifolds}
-\subsection{Orientifold planes and D-branes}
-%
-%\todoin{D-brane motivation through O-planes.}
-%If we compactify a Type II string theory on a Calabi-Yau manifold, we  obtain a four-dimensional
-%$\mathcal N=2$ supersymmetric theory.
-%In order to allow for chirality, we must obtain a $N=1$ theory. This can be done through the orientifold
-%projection, which consists in modding out $\Omega \mathcal R$ acting on the 10d manifold, 
-%where $\Omega$ is the worldsheet parity and $\mathcal R$ is a particular $\mathbb Z_2$ symmetry.
-%
-%
-%\todoin{Understand RR charges.}
-%\begin{equation}
-%  S= -\frac{1}{4\pi \alpha'}\int d^2\sigma \epsilon^{\alpha\beta} B_{\mu\nu}  \partial_\alpha X^\mu \partial_\beta X^\nu
-%\end{equation}
-%
-%\subsection{D6-branes in flat 10d space}
-%
-%We have seen that if we compactify an heterotic string theory on a Calabi-Yau manifold, we obtain
-%$\mathcal N=1$ which allows chirality. 
-%This is not the case of Type II theories, which lead to $\mathcal N=2$.
-%In order to reduce the degree of supersymmetry and thus obtain chiral 4d fermions, two D6-branes in flat 10d can intersect over a 4d region.
-%Before considering D6-branes over a Calabi-Yau compactification, we consider the flat space
-%case.
-%
-%The open string spectrum of an intersection of a stack of $N_1$ D6-branes and a stack of $N_2$ D6-branes
-%can be classified as:
-%
-%\begin{itemize}
-%  \item Strings stretching from one stack to itself, which lead to 7d $U(N_i)$ gauge bosons, three real
-%    adjoint scalars and their fermion superpartners, .
-%  \item String that go from one stack to the other are localized at the intersection. 
-%    Their associated fields are charged under the bi-fundamental representation $(N_1, \bar N_2)$ of 
-%    $U(N_1)\times U(N_2)$, which includes a 4d chiral fermion in $(N_1,\bar N_2)$.
-%\end{itemize}
-%
-%\subsection{D6-branes on a torus}
-%
-%Let us consider type IIA theory compactified on a 6-torus $T^6=T^2 \times T^2 \times T^2$.
-%
-\subsection{D6-branes on a Calabi-Yau. Special Lagrangians.}
-%In order to obtain stable D6-brane configurations, we impose that they wrap around volume 
-%minimizing 3-cycles, which are special Lagrangian 3-cycles and satisfy
-%\begin{equation}
-%  J|_\Pi = 0 , \qquad \Im (e^{-i\phi}\Omega_3)|_\Pi=0
-%\end{equation}
-%
-%The volume of the special Lagrangian 3-cycle is
-%\begin{equation}
-%  Vol(\Pi)=\int_\Pi \Re(e^{-i\phi}\Omega_3)
-%\end{equation}
-%
-%\todoin{Spectrum}
+
+\subsection{TIIA orientifolds}
+If we compactify a type II string theory on a Calabi-Yau manifold, we  obtain a four-dimensional
+$\mathcal N=2$ supersymmetric theory.
+This degree of supersymmetry does not allow for chiral fermions, so Calabi-Yau compactifications
+of type II theories have little interest in the context of model building.
+An option to reduce the supersymmetry to $\mathcal N=1$  is to apply the orientifold
+projection, which consists in modding out the action of $\Omega \mathcal R (-1)^{F_L}$, 
+where $\Omega$ is the worldsheet parity (so strings become unoriented) and $\mathcal R$ is a particular $\mathbb Z_2$ symmetry of
+the compact six-dimensional space.
+\todoin{Explain worldsheet vs manifold}
+\todoin{(-1) not necessary type IIB. Where does it act?}
+
+$\mathcal R$ condition anti-holomorphic involution squares to the identity
+$J\to -J$ and $\Omega \to \bar \Omega$.
+
+The fixed points under $\mathcal R$ define the orientifold planes in the model and are denoted
+as O$p$-planes, where $p$ is the spatial dimension.
+They span the entire four-dimensional Minkowski space and wrap a compact $(p-3)$-cycle on the internal space.
+
+O$p$-planes carry RR charge, so in order to eliminate RR tadpoles we must also introduce D$p$-branes,
+which carry opposite charge.
+It is important to note that D$p$-branes do not need to wrap the same 3-cycles as the O$p$-planes.
 
 
+\subsection{D-branes on CY}
 
-%INTRODUCE NON-ABELIAN GAUGE BOSONS
-%
-\subsection{Model building}
+\todoin{Can a submanifold of a CY not be a cycle?}
+In order to obtain stable D6-brane configurations on a type IIA theory compactified on a Calabi-Yau manifold, 
+we impose that they wrap around volume minimizing 3-cycles on the compact space.
+The volume minimizing condition means that the branes must wrap special Lagrangian 3-cycles $\Pi$, which satisfy
+\begin{equation}
+  k|_\Pi = 0 , \qquad \Im (e^{-i\phi}\Omega_3)|_\Pi=0
+\end{equation}
+
+for some real $\phi$. $k$ is the Kähler two-form and $\Omega_3$ the holomorphic three-form.
+The $e^{-i\phi}\Omega_3$ is referred as a calibration and the special Lagrangian is calibrated with respect to it, for every choice of $\phi$.
+The volume of the special Lagrangian 3-cycle is
+\begin{equation}
+  \mathrm{Vol}(\Pi)=\int_\Pi \Re(e^{-i\phi}\Omega_3)
+\end{equation}
+
+
+D6-branes wrapped around an special Lagrangian cycle are guaranteed to preserve 4-dimensional $\mathcal N=1$. 
+This preserved supersymmetry concides with that preserved by O$p$-planes only if $\phi=0$.
+\todoin{Should relocate. What if otherwise?}
+The open string spectrum of D$6_a$-brane stacks with multiplicities $N_a$ wrapping special Lagrangian 3-cycles $\Pi_a$ 
+can be classified into two sectors: strings that stretch from one stack to itself and those that stretch between to stacks, $6_a$ and $6_b$.
+$b_1(\Pi_a)$ 
+  chiral fermion intersection number $I_{ab}=[\Pi_a][\Pi_b]$ which transform as $(\mathbf{N_a},\mathbf{\bar N_b})$ relative angle between.
+
+
+\subsection{Orientifold compactifications with intersecting D-branes}
+
+$z_i \to \bar z_i$
+
+\begin{equation}
+  \theta_1 + \theta_2 + \theta_3 = 0
+\end{equation}
+
+\begin{equation}
+  \sum_a N_a [\Pi_a] + \sum_a N_{a} [\Pi_{a'}] - 4 [\Pi_{O6}]=0
+\end{equation}
+
+\subsection{Spectrum, effective action and model building?}
+
+\begin{equation}
+\begin{aligned}
+C  
+\end{aligned}
+\end{equation}
