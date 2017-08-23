@@ -52,24 +52,23 @@ The resulting action of the bosonic sector of the D$p$-brane is the sum of a Dir
 The DBI term carries the information of how a D$p$-brane interacts with the NSNS fields. 
 It takes the form
 
+%\begin{equation}
+%  S_{DBI}= -\frac{\alpha'^{-(p+1)/2}}{(2\pi)^p}\int_{W_{p+1}}  d^{p+1}x f(\phi^i, A^\mu, G_{\mu\nu}, B_2, \phi)
+%\end{equation}
+%
+%where the precise expression of $f$ is unimportant for the purposes of this work.
+
 \begin{equation}
-  S_{DBI}= -\frac{\alpha'^{-(p+1)/2}}{(2\pi)^p}\int_{W_{p+1}}  d^{p+1}x f(\phi^i, A^\mu, G_{\mu\nu}, B_2, \phi)
+  S_{DBI}= -\frac{\alpha'^{-(p+1)/2}}{(2\pi)^p} \int d^{p+1} x e^{-\phi} \sqrt{-\det(P\qty[G+B]-2\pi \alpha'F)}
 \end{equation}
 
-where the precise expression of $f$ is unimportant for the purposes of this work.
-\todoin{What is the background here and what is dynamical? BG: closed string fields and Dynamical: open string fields?}
+gauge field strength $F=d $
 
-%\begin{equation}
-%  S_{DBI}= -\frac{\alpha'^{-(p+1)/2}}{(2\pi)^p} \int d^{p+1} x e^{-\phi} \sqrt{-\det(P\qty[G+B]-2\pi \alpha'F)}
-%\end{equation}
-%
-%gauge field strength $F=d $
-%
-%\begin{equation}
-%  \mu_p = \frac{(\alpha')^{-(p+1)/2}}{(2\pi)^p}
-%\end{equation}
-%
-%pullback
+\begin{equation}
+  \mu_p = \frac{(\alpha')^{-(p+1)/2}}{(2\pi)^p}
+\end{equation}
+
+pullback
 
 If we expand the DBI action in powers of $\alpha'$, we obtain the Yang-Mills term
 \begin{equation}
@@ -82,32 +81,33 @@ g^2_{YM} = g_s \alpha'^{(p-3)/2}(2\pi)^{p-2}
 \end{equation}
 
 The Chern-Simons term is topological in nature and describes how D$p$-branes interact with RR-fields.
-%Which means that D$p$-branes are carry RR charge.
-\todoin{Anything more to add?}
 
-%\begin{equation}
-%S_{CS}= \mu_p \int P[\sum_p c_q]\wedge e^{2\pi\alpha F_2 -B_2}\wedge \hat A (R)
-%\end{equation}
+\begin{equation}
+S_{CS}= \mu_p \int P\qty[\sum_p c_q]\wedge e^{2\pi\alpha F_2 -B_2}\wedge \hat A (R)
+\end{equation}
+\todoin{Detail}
+A-roof polynomial
 
 \subsection{Multiple D-branes}
 
 It is convenient to generalize the single D$p$-brane configuration to $N$ parallel D$p$-branes.
 In order to determine the spectrum of a stack of D$p$-branes, we consider open strings with endpoints 
-attached to either a single brane or two of them.
-
-In the case of $N$ coincident D$p$-branes, all configurations lead to massless states, so the 
-gauge symmetry is increased from $U(1)$ to $U(N)$.
-The massless spectrum is composed of $(p-1)$-dimensional $U(n)$ gauge bosons, $(9-p)$ real
-scalars in the adjoint representation and several fermions in the adjoint representation.
+attached to either a single brane or two distinct ones.
 
 If all branes are separated from each other, strings that stretch from a brane to itself correspond to massless gauge bosons that belong to $U(1)^N$ .
 In contrast, strings that stretch from one brane $A$ to another brane $B$ lead to massive particles whose
 masses increases with the distance between branes.
-The lightest of these particles have opposite have charge $(1,-1)$ under $U(1)_A \times U(1)_B$.
-Since Type IIA strings carry an orientation, string that stretch from $B$ to $A$ would have opposite charges.
+The lightest of these particles have opposite charge $(1,-1)$ under $U(1)_A \times U(1)_B$.
+Since Type IIA strings carry an orientation, a string stretching $B$ to $A$ would have opposite charges.
+
+In the case of $N$ coincident D$p$-branes, all configurations lead to massless states, such that the 
+gauge symmetry enhances from $U(1)^N$ to $U(N)$.
+The massless spectrum is composed of $(p-1)$-dimensional $U(N)$ gauge bosons, $(9-p)$ real
+scalars in the adjoint representation of $U(N$ and several fermions in the adjoint representation.
+
 
 Let us now suppose D$p$-branes which are not parallel, so they can intersect each other.
-This situation is relevant because in the case of D6-branes, it leads to 4-dimensional chiral fermions.
+This situation is relevant as it can lead to four-dimensional chiral fermions in the case of intersecting D6-branes.
 We are interested in describing the open string spectrum of two stacks of D$6$-branes that intersect over a 4-dimensional subspace of their volumes.
 
 Strings that stretch from a coincident stack of $N$ D6-branes to itself lead to 7-dimensional $U(N)$ gauge bosons, three real adjoint scalars and their fermion superpartners.
@@ -127,7 +127,7 @@ If some of the angles vanish, the supersymmetry would we enhanced.
 
 The reason we have used D6-branes and no other dimension of D$p$-branes is that they would not lead to chiral fermions in 4 dimensions.
 Intuitively, two D6-branes allow to define an orientation in the transverse 6-dimensional space, which would not be possible
-with two other type of D$p$-branes.
+with two other type of D$p$-branes in type IIA string theory
 \todoin{So have we seen that no Calabi-Yau is needed to obtain 4d chiral fermions if we consider a theory with intersecting 
 D6-branes? Of course, we still would have to cancel RR charges in some way.}
 
