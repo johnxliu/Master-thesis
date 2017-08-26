@@ -19,10 +19,17 @@ The fermions, which belong to the NS-R and R-NS sectors, are two opposite-chiral
 
 \subsection{Type IIA SUGRA}
  
-The low-energy theory of the ten-dimensional type IIA string theory is type IIA SUGRA.
-The spectrum of Type IIA SUGRA has as elementary fermions, which belong to the massless spectrum (NS-R and R-NS) of type IIA theory,
-two Majorana-Weyl gravitinos of the same chirality $\psi_M^a$ and two dilatinos $\lambda^a$. 
-\todoin{Action}
+The low-energy theory of the ten-dimensional type IIA string theory is type IIA supergravity (SUGRA).
+%The spectrum of Type IIA SUGRA has as elementary fermions, which belong to the massless spectrum (NS-R and R-NS) of type IIA theory,
+%two Majorana-Weyl gravitinos of the same chirality $\psi_M^a$ and two dilatinos $\lambda^a$. 
+
+The spectrum of of type IIA SUGRA is the massless spectrum of type IIA string theory and has as effective action 
+\begin{align}
+2\kappa^2 S=&\int d^{10}x \sqrt{-G}\qty[e^{-2\phi}\qty(R+4\partial_\mu\phi \partial^\mu\phi-\frac{1}{2}|H_3|^2)-\frac{1}{2}|F_2|^2-\frac{1}{2}|\tilde F_4|^2]\\& -\frac{1}{2}\int B_2\wedge F_4\wedge F_4
+\end{align}
+where we employ the following definitions:
+$H_3=dB_2$, $F_2=dC_1$, $F_4=dC_3$, $\tilde F_4=dC_3 -C_1\wedge H_3$ and $2\kappa^2 =(2\pi)^7 \alpha'^4$.
+$\alpha'$ is the Regge slope which is a free parameter of string theory of dimension length squared.
 
 
 \subsection{The D-brane}
@@ -42,7 +49,10 @@ This implies that massless particles must transform under irreducible representa
 $SO(d-2)$.
 The massless spectrum in $(p+1)$ dimensions of the open string theory is composed by a gauge boson $A^\mu$ ($\mu=0,\ldots,p$) (corresponding
 to longitudinal oscillations to the brane),
-$9-p$ real scalars $\phi^i$ (corresponding to transverse oscillations to the brane) and some fermions $\lambda_a$.
+$9-p$ real scalars $\phi^i$ (corresponding to transverse oscillations to the brane) and some fermions
+\footnote{
+These $p+1$ fermions correspond to the decomposition of a ten-dimensional Majorana fermion along the D-brane. They are the gaugini (superpartners of the gauge bosons) and the superpartners of the scalar fields.}
+$\lambda_a$.
 This particle content can be arranged into a vector supermultiplet of $U(1)$ with $16$ supersymmetries
 in $(p+1)$ dimensions. 
 Thus, a D$p$-brane reduces the degree of supersymmetry of the type IIA theory by half.
@@ -57,24 +67,29 @@ The resulting action of the bosonic sector of the D$p$-brane is the sum of a Dir
 
 The DBI term carries the information of how a D$p$-brane interacts with the NSNS fields. 
 It takes the form
-
-%\begin{equation}
-%  S_{DBI}= -\frac{\alpha'^{-(p+1)/2}}{(2\pi)^p}\int_{W_{p+1}}  d^{p+1}x f(\phi^i, A^\mu, G_{\mu\nu}, B_2, \phi)
-%\end{equation}
-%
-%where the precise expression of $f$ is unimportant for the purposes of this work.
-
 \begin{equation}
-  S_{DBI}= -\frac{\alpha'^{-(p+1)/2}}{(2\pi)^p} \int d^{p+1} x e^{-\phi} \sqrt{-\det(P\qty[G+B]-2\pi \alpha'F)}
+  S_{DBI}= -\mu_p \int d^{p+1} x e^{-\phi} \sqrt{-\det(P\qty[G+B]-2\pi \alpha'F)}
+  \label{eq:dirac}
 \end{equation}
-
-gauge field strength $F=d $
-
+where the space-time gauge field strength is $F=dA_1$, the coefficient $\mu_p$ is
 \begin{equation}
   \mu_p = \frac{(\alpha')^{-(p+1)/2}}{(2\pi)^p}
 \end{equation}
+and we define the pullback of a tensor $G$ into the brane worldvolume as
+\begin{equation}
+  P[G]_{\mu\nu}=G_{\mu\nu}+G_{\mu i}\partial_\nu \phi^i + \partial_\mu \phi^iG_{i\nu}+\partial_\mu\phi^i\partial_\nu\phi^j G_{ij}.
+\end{equation}
 
-pullback
+The form  is this action can be justified in the following way:
+\todoin{Complete details.}
+\begin{itemize}
+  \item  due to the pull-back of the ten-dimensional metric to the D-brane worldvolume, there is a natural metric on the D-brane worldvolume , which can be used to compute to set up a volume-element for the D-brane; integrating over the entire worldvolume then gives you part of the DBI-action
+
+ \item the pull-back of the NS two-form represents a first generalization of the D-brane volume-element and requires also the inclusion of the U(1) gauge field associated to the open string excitations (to preserve gauge invariance)
+
+  \item the coupling of the D-brane to the NS-fields is proportional to $e^{-\phi}$, which is the characteristic coupling for open string interactions
+\end{itemize}
+
 
 If we expand the DBI action in powers of $\alpha'$, we obtain the Yang-Mills term
 \begin{equation}
@@ -87,12 +102,12 @@ g^2_{YM} = g_s \alpha'^{(p-3)/2}(2\pi)^{p-2}
 \end{equation}
 
 The Chern-Simons term is topological in nature and describes how D$p$-branes interact with RR-fields.
-
+It is given by
 \begin{equation}
-S_{CS}= \mu_p \int P\qty[\sum_p c_q]\wedge e^{2\pi\alpha F_2 -B_2}\wedge \hat A (R)
+S_{CS}= \mu_p \int P\qty[\sum_q c_q]\wedge e^{2\pi\alpha F_2 -B_2}\wedge \hat A (R)
 \end{equation}
-\todoin{Detail}
-A-roof polynomial
+where we integrate only over the $(p+1)$-forms of the integrand. 
+The first terms of the A-roof polynomial are $\hat A(R) = 1- \frac{1}{24(8\pi)} \Tr R^2+\cdots$ and $R$ is the space-time curvature two-form.
 
 \subsection{Multiple D-branes}
 
@@ -106,8 +121,8 @@ masses increases with the distance between branes.
 The lightest of these particles have opposite charge $(1,-1)$ under $U(1)_A \times U(1)_B$.
 Since Type IIA strings carry an orientation, a string stretching $B$ to $A$ would have opposite charges.
 
-In the case of $N$ coincident D$p$-branes, all configurations lead to massless states, such that the 
-gauge symmetry enhances from $U(1)^N$ to $U(N)$.
+In the case of $N$ coincident D$p$-branes, strings that stretch between any two D$p$-branes (possibly the same)
+give rise to massless states, so the gauge symmetry enhances from $U(1)^N$ to $U(N)$.
 The massless spectrum is composed of $(p-1)$-dimensional $U(N)$ gauge bosons, $(9-p)$ real
 scalars in the adjoint representation of $U(N$ and several fermions in the adjoint representation.
 
