@@ -323,7 +323,14 @@ In the case of a Calabi-Yau three-fold
 \end{array}
 \]}
 
-\todoin{Mirror symmetry}
+A very fruitful relation between manifolds is mirror symmetry, which associates topological
+properties between different Calabi-Yau manifold.
+A realization of mirror symmetry for a Calabi-Yau three-fold $X$ is that there exists a mirror manifold $Y$
+such that
+\begin{equation}
+  h_{1,1}(X)=h_{2,1}(X) \qquad and \qquad h_{2,1}(X)=h_{1,1}(Y)
+\end{equation}
+Thus, we can calculate some properties on $X$ and immediately obtain information on its mirror manifold.
 
 \subsection{Homology}
 
@@ -332,7 +339,9 @@ The basic element of homology is the $p$-chain $a_p$, which in the simplest form
 formal sum of $p$-dimensional submanifolds $N_p^k$ (possibly with boundary)
 \begin{equation}
   a_p = \sum_k c_k N_p^k
+  \label{eq:exp}
 \end{equation}
+where $c_k$ are real numbers.
 $p$-forms that have no boundary are called $p$-cycles. The boundary operator $\partial$ satisfies $\partial^2$.
 The homology group $H_q(X,\mathbb R)$ is defined as the quotient space of $q$-cycles modulo $q$-dimensional
 boundaries
@@ -340,6 +349,8 @@ boundaries
   H_q(X,\mathbb R) =\qty{a| \partial a=0}/\qty{b|b=\partial a}
 \end{equation}
 The dimension of $H_q(X,\mathbb R)$ is $h_q(X)$.
+It is sometimes convenient to consider the coefficients $c_k$ of the expansion \eqref{eq:exp} to
+be integers, in that case the associated homology group is $H_p(X,\mathbb Z)$.
 
 It can be seen that homology resembles cohomology replacing chains by forms, the boundary operator
 by the exterior derivative and cycles by closed forms.
@@ -347,19 +358,18 @@ In fact, they are algebraic duals, in the sense that integration of a $p$-form o
 defines and isomorphism between $H_q$ and $H^q_d$ in the case of compact manifolds. 
 This implies that the dimensions of both group coincide $h_q=h^q$.
 
-It is interesting to generalize the concept of how many times to lines intersect to the case of
+It is useful to generalize the concept of how many times to lines intersect to the case of
 $p$-cycles.
-intersection number
-topological invariant should depend on the homology class only
+The intersection number is a topological invariant, so it depends on the homology
+classes of $H(X,\mathbb Z)$ only.
+Given a $p$-cycle $a_p$ and a $d-p$-cycle $b_{d-p}$ the intersection number is defined as
 \begin{equation}
   [a_p] [b_{d-p}] = \int_X \delta(a_p)\wedge \delta(b_{d-p})
 \end{equation}
-
+where Dirac delta function satisfies
 \begin{equation}
-  \int_{a_p} B_p = \int_X B_p \wedge \delta(a_p)
+  \int_{a_p} B_p = \int_X B_p \wedge \delta(a_p).
 \end{equation}
-
-\todoin{Complete. Notation.}
 
 \subsection{Moduli space}
 
