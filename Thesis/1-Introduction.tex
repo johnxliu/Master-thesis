@@ -4,15 +4,16 @@
 %string theories, the latter include both bosons and fermions.
 %While the bosonic string theory can be formulated solely using closed strings, superstring theories
 %require closed and open strings.
-In this thesis we will only work with the supersymmetric type IIA theory. 
+%In this thesis we will only work with the supersymmetric type IIA theory. 
 The study of string theory in Minkowski spacetime has lead to the identification of five consistent string theories, which all turn out to be supersymmetric and give rise to massless bosonic and fermionic excitations in their spectrum. The five string theories were given their name according to their own specificities: Type heterotic HE and HO, Type I, Type IIB and Type IIA string theory. In this thesis we will only concentrate on the last one in the list. 
 
 \subsection{Type IIA spectrum}
 Type IIA string theory requires ten space-time dimensions to be consistent.
-Furthermore, it has a 10-dimensional supersymmetry with 32 supercharges, which corresponds to $\mathcal N=(1,1)$.
-The flat 10-dimensional space-time bosonic spectrum of type IIA can be classified according to
-the boundary conditions of the strings, whether we consider Ramond (R) or Neveu–Schwarz (NS) conditions.
-There would be an infinite tower of massive string states, but restrict the discussion to the massless states only.
+Furthermore, it has a 10-dimensional supersymmetry with 32 supercharges, which corresponds to $\mathcal N=(1,1)$ supersymmetry.
+The bosonic spectrum of Type IIA on a flat ten-dimensional space-time results upon the correct quantization of the two-dimensional string theory. The two-fold choice of boundary conditions in the supersymmetric string, Ramond (R) or Neveu-Schwarz (NS) conditions, allows for rich spectrum of states that needs to be classified in terms of representations under the space-time group $SO(9,1)$. 
+%The flat 10-dimensional space-time bosonic spectrum of type IIA can be classified according to
+%the boundary conditions of the strings, whether we consider Ramond (R) or Neveu–Schwarz (NS) conditions.
+There is an infinite tower of massive string states (whose mass is inversely proportional to the string length $\ell_s$), but we restrict the discussion to the massless states only.
 In the NS-NS sector, we find the dilaton $\phi$, a two-form $B_2$ and a graviton $G_{\mu\nu}$,
 while in the R-R sector we identify the 1- and 3-forms $c_1, c_3$.
 The fermions, which belong to the NS-R and R-NS sectors, are two opposite-chirality gravitinos $\psi$ and two opposite-chirality dilatinos $\lambda$.
@@ -22,32 +23,33 @@ The fermions, which belong to the NS-R and R-NS sectors, are two opposite-chiral
 The low-energy theory of the ten-dimensional type IIA string theory is type IIA supergravity (SUGRA).
 %The spectrum of Type IIA SUGRA has as elementary fermions, which belong to the massless spectrum (NS-R and R-NS) of type IIA theory,
 %two Majorana-Weyl gravitinos of the same chirality $\psi_M^a$ and two dilatinos $\lambda^a$. 
-
-The spectrum of of type IIA SUGRA is the massless spectrum of type IIA string theory and has as effective action 
+The spectrum of type IIA SUGRA is the massless spectrum of type IIA string theory and the effective action yields
 \begin{align}
 2\kappa^2 S=&\int d^{10}x \sqrt{-G}\qty[e^{-2\phi}\qty(R+4\partial_\mu\phi \partial^\mu\phi-\frac{1}{2}|H_3|^2)-\frac{1}{2}|F_2|^2-\frac{1}{2}|\tilde F_4|^2]\\& -\frac{1}{2}\int B_2\wedge F_4\wedge F_4
 \end{align}
 where we employ the following definitions:
 $H_3=dB_2$, $F_2=dC_1$, $F_4=dC_3$, $\tilde F_4=dC_3 -C_1\wedge H_3$ and $2\kappa^2 =(2\pi)^7 \alpha'^4$.
-$\alpha'$ is the Regge slope which is a free parameter of string theory of dimension length squared.
-
+$\alpha'$ is known as the Regge slope which is a free parameter of string theory related to the string length as $\ell_s = 2 \pi \sqrt{\alpha'}$.
 
 \subsection{The D-brane}
 
-The two-dimensional strings can be generalized to $(p+1)$-dimensional extended object, which are called D$p$-branes.
+The two-dimensional strings can be generalized to $(p+1)$-dimensional extended objects, which are 
+called Dirichtlet $p$-branes or D$p$-branes for short.
 Thus, a D$1$-brane would correspond to a D-string, a D$2$-brane would be a three-dimensional membrane and so on.
-The existence of D$p$-branes can be motivated, in the weak coupling limit, as 
-objects where open strings end, so they are a way to impose Dirichlet boundary conditions on open strings.
-In type IIA string theory, only even-dimensional D$p$-branes are physical, which are: the D$0$, D$2$, D$4$, D$6$ and D$8$-branes.
+The existence of D$p$-branes can be motivated, in the weak string coupling limit, as 
+objects on which open strings end,
+such that they correspond to physical configurations described in terms of Dirichlet boundary conditions for open strings.
+%so they are a way to impose Dirichlet boundary conditions on open strings.
+In type IIA string theory, only even-dimensional D$p$-branes are physical: the D$0$, D$2$, D$4$, D$6$ and D$8$-branes.
 
 We can study the dynamics of a D$p$-branes in terms of the open string excitations  with endpoints
 attached to the D$p$-brane.
 Let us consider the open string excitations of a D$p$-brane, the latter spanning $p+1$ dimensions and transverse to $d-p-1$ dimensions.
-The presence of the D$p$-brane breaks the ten-dimensional Poincaré invariance of the theory, because
+The presence of the D$p$-brane breaks the ten-dimensional Poincaré invariance of the theory, while
 open string excitations propagate on the $(p+1)$-dimensional volume of the D$p$-brane only.
-This implies that massless particles must transform under irreducible representations of $SO(p-2)$, instead of
-$SO(d-2)$.
-The massless spectrum in $(p+1)$ dimensions of the open string theory is composed by a gauge boson $A^\mu$ ($\mu=0,\ldots,p$) (corresponding
+This implies that massless particles must transform under irreducible representations 
+of the D-brane worlvolume little group $SO(p-2)$ instead of the space-time little group $SO(d-2)$.
+The massless spectrum in $(p+1)$ dimensions of the open supersymmetric string is composed of a gauge boson $A^\mu$ ($\mu=0,\ldots,p$) (corresponding
 to longitudinal oscillations to the brane),
 $9-p$ real scalars $\phi^i$ (corresponding to transverse oscillations to the brane) and some fermions
 \footnote{
@@ -65,7 +67,7 @@ The vev of these scalar fields determine the position of the D$p$-brane in the t
 fields determine the evolution of the D$p$-brane worldvolume $W_{p+1}$ (the generalization of the particle worldline to the case of higher-dimensional branes). 
 The resulting action of the bosonic sector of the D$p$-brane is the sum of a Dirac-Born-Infeld term $S_{DBI}$ and a Chern-Simons term $S_{CS}$.
 
-The DBI term carries the information of how a D$p$-brane interacts with the NSNS fields. 
+The DBI term carries the information on how a D$p$-brane interacts with the NSNS fields. 
 It takes the form
 \begin{equation}
   S_{DBI}= -\mu_p \int d^{p+1} x e^{-\phi} \sqrt{-\det(P\qty[G+B]-2\pi \alpha'F)}
@@ -80,31 +82,33 @@ and we define the pullback of a tensor $G$ into the brane worldvolume as
   P[G]_{\mu\nu}=G_{\mu\nu}+G_{\mu i}\partial_\nu \phi^i + \partial_\mu \phi^iG_{i\nu}+\partial_\mu\phi^i\partial_\nu\phi^j G_{ij}.
 \end{equation}
 
-The form  is this action can be justified in the following way:
-\todoin{Complete details.}
+The form  is this action can be motivated in the following way:
 \begin{itemize}
-  \item  due to the pull-back of the ten-dimensional metric to the D-brane worldvolume, there is a natural metric on the D-brane worldvolume , which can be used to compute to set up a volume-element for the D-brane; integrating over the entire worldvolume then gives you part of the DBI-action
+  \item Ignoring the contributions of $F$, $B$ and $\phi$, the action reduces to 
+   \begin{equation}
+  S_{DBI}= -\mu_p \int d^{p+1} x \sqrt{-\det(P\qty[G])}.
+   \end{equation}
+   $P[G]$ should be viewed as a metric defined on the D-brane worldvolume, which is inherited from the ambient ten-dimensional metric.
+   Thus, integrating $\sqrt{-\det(P\qty[G])}$ yields the total volume of the worldvolume.
 
- \item the pull-back of the NS two-form represents a first generalization of the D-brane volume-element and requires also the inclusion of the U(1) gauge field associated to the open string excitations (to preserve gauge invariance)
+ \item The pull-back of the NS two-form represents is a first generalization of the D-brane volume-element and requires also the inclusion of the $U(1)$ gauge field associated to the open string excitations (to preserve gauge invariance)
 
-  \item the coupling of the D-brane to the NS-fields is proportional to $e^{-\phi}$, which is the characteristic coupling for open string interactions
+  \item The coupling of the D-brane to the NS-fields is proportional to $e^{-\phi}$, which is the characteristic coupling for open string interactions.
 \end{itemize}
-
 
 If we expand the DBI action in powers of $\alpha'$, we obtain the Yang-Mills term
 \begin{equation}
   S_{YM} = \frac{\alpha'^{-(p-3)/2}}{4g_s (2\pi)^{p-2}} \int d^{p+1} x \sqrt {-g} \Tr F_{\mu\nu} F^{\mu\nu}
 \end{equation}
 which allows us to identify the Yang-Mills coupling as 
-
 \begin{equation}
-g^2_{YM} = g_s \alpha'^{(p-3)/2}(2\pi)^{p-2}
+g^2_{YM} = g_s \alpha'^{(p-3)/2}(2\pi)^{p-2}.
 \end{equation}
 
 The Chern-Simons term is topological in nature and describes how D$p$-branes interact with RR-fields.
 It is given by
 \begin{equation}
-S_{CS}= \mu_p \int P\qty[\sum_q c_q]\wedge e^{2\pi\alpha F_2 -B_2}\wedge \hat A (R)
+  S_{CS}= \mu_p \int_{W_{p+1}} P\qty[\sum_q c_q]\wedge e^{2\pi\alpha F_2 -B_2}\wedge \hat A (R)
 \end{equation}
 where we integrate only over the $(p+1)$-forms of the integrand. 
 The first terms of the A-roof polynomial are $\hat A(R) = 1- \frac{1}{24(8\pi)} \Tr R^2+\cdots$ and $R$ is the space-time curvature two-form.
@@ -124,7 +128,7 @@ Since Type IIA strings carry an orientation, a string stretching $B$ to $A$ woul
 In the case of $N$ coincident D$p$-branes, strings that stretch between any two D$p$-branes (possibly the same)
 give rise to massless states, so the gauge symmetry enhances from $U(1)^N$ to $U(N)$.
 The massless spectrum is composed of $(p-1)$-dimensional $U(N)$ gauge bosons, $(9-p)$ real
-scalars in the adjoint representation of $U(N$ and several fermions in the adjoint representation.
+scalars in the adjoint representation of $U(N)$ and several fermions in the adjoint representation.
 
 
 Let us now suppose D$p$-branes which are not parallel, so they can intersect each other.
