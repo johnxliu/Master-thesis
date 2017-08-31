@@ -1,0 +1,69 @@
+
+%There are several reasons for this choice:
+%\begin{itemize}
+%%  \item Gauge hierarchy problem.
+%%    \todoin{Is it relevant today?}
+%  \item As a way to solve the equations of motion.
+%    \todoin{What does this mean? A SUSY configurations satisfies the eom -> SUGRA. Classically?}
+%  \item It gives a nice phenomenological description.
+%
+%    A four dimensional theory with $\mathcal N=1$ supersymmetry allows for massless fermions
+%    that transform in a complex representation of the gauge group associated to the supersymmetry.
+%    Since $\mathcal N\geq 2$ in four dimensions all fermions must transform in a real representation 
+%    of the gauge group, we shall only consider the case $\mathcal N=1$.
+%
+
+
+
+
+%The anti-commutation relations are of the type
+%\begin{equation}
+%  \{ Q_\alpha, Q_\beta\} = \{\bar Q_\alpha,\bar Q_\beta\} = 0, \qquad \{Q_\alpha, \bar Q_\beta\}\sim \sigma_{\alpha\beta}^\mu P_\mu
+%\end{equation}
+
+%A finite SUSY transformation is obtained exponentiating the generators
+%\begin{equation}
+%  e^{i(\eta Q+ \bar \eta \bar Q - x_\mu P^\mu)}
+%\end{equation}
+
+%Every supersymmetry transformation is parametrized by an infinitesimal parameter $\eta_\alpha (X)$,
+%so that 
+%\begin{equation}
+%  \delta \ket{boson} = \ket{fermion} 
+%\end{equation}
+%\todoin{Clarify transformation. Do we need to introduce superspace to introduce $\eta$?}
+%\todoin{Insert definition of $\eta$. Is it a Grassmann variable, a spinor, an operator\ldots}
+%which is anti-commuting, two-component Weyl fermion that has an associated conserved supercharge $Q$ at every space-time point.
+
+
+
+
+
+%For convenience, we define employ the democratic formulation
+%We also define the field strength of the NS form $H=dB$ and the $F^{10)}$ as the formal sum
+%\begin{equation}
+%  F^{10)}=dC-H\wedge C+me^B
+%\end{equation}
+%where $C$ is the formal sum of odd differential form fields.
+%\begin{equation}
+%  F^{10)}_n = (-1)^{\floor{n/2}}\star F^{10)}_{10-n}
+%\end{equation}
+%
+
+
+%\todoin{Should I explain cov. der.?}
+%Where $\slashed{F}_n^{10)} = \frac{1}{n!}F_{P_1\ldots P_N}\Gamma^{P_1\ldots P_N}$,
+%$\slashed H_M= \frac{1}{2} H_{MNP} \Gamma^{NP}$, $\Gamma_{P_1\ldots P_N}=\Gamma_{[P_1}\ldots\Gamma_{P_N]}$ 
+%and 
+%\todoin{
+%  the Dirac matrices for the ten-dimensional space time are
+%  $\Gamma^M = e^M_A \Gamma^A$.
+%  Here $e^M_A$ denotes the vielbein that describes the graviton which is related to the metric through $G_{\mu\nu}=e^a_\mu e^b_\nu \eta_{ab}$ 
+%  and $\Gamma^A$ are elements of a Clifford algebra, so $\{\Gamma^A,\Gamma^B\}=2\eta^{AB}$. 
+%}
+
+
+
+%\begin{equation}
+%    \delta \psi_M = D_M \eta + \frac{1}{4}\slashed H_M \Gamma_{11} \eta + \frac{1}{16}e^\phi \sum_n \slashed F^{10)}_n \Gamma_M \Gamma_{11}^{n/2)} \sigma^1 \eta
+%\end{equation}

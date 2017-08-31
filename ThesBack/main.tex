@@ -1,0 +1,96 @@
+\documentclass[oneside,secnumarabic,10pt,nobalancelastpage,nofootinbib,a4paper]{memoir}
+%\documentclass[aps,secnumarabic,nobalancelastpage,amsmath,amssymb,
+%nofootinbib]{revtex4}
+
+% secnumarabic is a particularly nice way of identifying sections by
+% number to aid electronic review and commentary.
+
+
+\usepackage[english, activeacute]{babel} %Definir idioma español
+\usepackage[utf8]{inputenc} %Codificacion utf-8
+\usepackage[T1]{fontenc}
+
+\usepackage{graphics}      % standard graphics specifications
+\usepackage{graphicx}      % alternative graphics specifications
+\usepackage{url}           % for on-line citations
+\usepackage{hyperref}
+%\usepackage{cleveref}
+\usepackage{bm}            % special 'bold-math' package
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{physics}
+\usepackage[exponent-product=\cdot,range-phrase=--,range-units=single]{siunitx}
+
+\usepackage{longtable}     % helps with long table options
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{babelbib}
+\usepackage{epigraph}
+
+%\setlength{\paperheight}{11in}
+\usepackage{todonotes}
+\usepackage{microtype}
+
+\graphicspath{{images/}}
+
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+\nouppercaseheads
+%\setlength{\parindent}{0pt}
+
+%tikz
+
+%\usepackage{tikz}
+%\usetikzlibrary
+%{decorations.markings}
+%\usepackage{xcolor}
+%\definecolor{gridcolor}{RGB}{255 216 234}
+%\definecolor{gridlabelcolor}{RGB}{255 24 131}
+%\def\rnd#1{
+%    \pgfmathprintnumberto
+%[precision=2]{#1}{\temp}\temp
+%}
+%
+%\usetikzlibrary{arrows}
+%\pgfdeclarelayer{background}
+%\pgfsetlayers{background,main}
+%\usetikzlibrary{tqft}
+%\usetikzlibrary{calc}
+
+\usepackage{wrapfig}
+\usepackage{slashed}
+\usepackage{youngtab}
+
+%Default inline comments
+\newcommand{\todoin}[2][]{\todo[inline,#1]{#2}}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\interfootnotelinepenalty=10000
+\begin{document}
+
+%\listoftodos
+
+\include{title}
+
+\frontmatter
+
+\tableofcontents*
+
+\mainmatter
+
+\renewcommand{\baselinestretch}{1.50}\normalsize
+
+%\include{0-Abstract}
+
+%\include{1-Introduction}
+
+%\include{2-Developement}
+
+\include{3-Project}
+
+%\include{4-Conclusion}
+
+\bibliographystyle{babunsrt}
+\bibliography{mybib}
+
+\end{document}

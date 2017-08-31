@@ -10,9 +10,6 @@ In this section, we describe Fermat's quintic and study the properties of SLag t
 defined on this manifold.
 
 \subsection{Fermat's quintic}
-%The construction of generic Calabi-Yau manifolds is a 
-%Chow's theorem asserts  that any $(n-r)$-dimensional submanifold of $\mathbb{CP}^n$ can be realized as the zero locus of $r$-homogeneous polynomial equations.
-%\todoin{Motivate better}
 The complex projective space $\mathbb{CP}^n$ is defined considering the complex space minus the origin $\mathbb{C}^{n+1}\backslash\qty{0}$
 and establishing the equivalence relation $( z_0,\ldots, z_{n})\sim(\lambda z_0,\ldots,\lambda z_{n})$, $\lambda\in\mathbb C$.
 %To emphasize that $z_i$ are homogeneous coordinates, they are sometimes denoted as $\qty[z_0:\ldots:z_{n}]$.
@@ -21,11 +18,11 @@ terms of the homogeneous coordinates $z_i$ by choosing $\lambda=1/z_j$ so
 \begin{equation}
   (\xi^1_j,\ldots,\xi^n_j)=\qty(\frac{z_0}{z_j},\ldots,\frac{z_{j-1}}{z_j},\frac{z_{j+1}}{z_j},\ldots,\frac{z_{n}}{z_j}).
 \end{equation}
-%It can also be shown that $\mathbb{CP}^n$ is a Kähler manifold.
-%$PGL$
 
-The complex projective space allows us to obtain lower dimensional manifolds as subspaces of $\mathbb{CP}^n$.
-Indeed, Chow's theorem states that any submanifold of complex dimension $n-r$ of $\mathbb{CP}^n$ can be realized as the zero locus of $r$-homogeneous polynomial equations.
+The complex projective space allows us to obtain lower dimensional Calabi-Yau manifolds as subspaces of $\mathbb{CP}^n$.
+Indeed, an hypersurface of the projective space $\mathbb{CP}^n$ described by a (single) homogeneous polynomial of degree $d$ 
+is a Calabi-Yau manifold (with vanishing first Chern class) if $d = n+1$. 
+%Indeed, Chow's theorem states that any submanifold of complex dimension $n-r$ of $\mathbb{CP}^n$ can be realized as the zero locus of $r$-homogeneous polynomial equations.
 An homogeneous polynomial $P$ of degree $d$ satisfies
 \begin{equation}
   P(\lambda z_1,\ldots,\lambda z_n)=\lambda^d P(z_1,\ldots,z_n).
@@ -48,12 +45,13 @@ Fermat's quintic threefold defined by the polynomial $P_5$ as
   %P_4(z)& = z_0^5+z_1^5+z_2^5+z_3^5=0\\
   P_5(z) = z_0^5+z_1^5+z_2^5+z_3^5+z_4^5=0.
 \end{equation}
-a hypersurface of the projective space $\mathbb{CP}^n$ described by a (single) polynomial of degree $d$ 
-is a Calabi-Yau manifold (with vanishing first Chern class) if $d = n+1$. 
+
 
 \subsection{Construction of SLags}
-A special-Lagrangian (SLag) three-cycle is constructed by introducing an anti-holomorphic involution.
-In the case of $\mathbb{CP}^4$, there is only one consistent anti-holomorphic involution,
+When considering Type IIA string theory on a Calabi-Yau manifold, we mod out the orientifold 
+projection (composed of a worldsheet parity and an orientifold involution) to obtain $\mathcal N=1$ supersymmetry.
+A special-Lagrangian (SLag) three-cycle is constructed with the aid of the anti-holomorphic involution.
+In the case of $\mathbb{CP}^4$, there is only one consistent anti-holomorphic involution \cite{Partouche2001},
 which acts on the homogeneous coordinates as $\mathcal R: z_i \to\bar z_i$.
 A particular instance of SLag three-cycle is defined as the fixed loci under $\mathcal R$.
 In the case of Fermat's quintic, finding the fixed loci under $\mathcal R$ leads to the following SLag
@@ -61,14 +59,14 @@ In the case of Fermat's quintic, finding the fixed loci under $\mathcal R$ leads
   \qty{\qty[x_0:x_1:x_2:x_3:x_4]\in  \mathbb{RP}^4| x_0^5+x_1^5+x_2^5+x_3^5+x_4^5=0}.
 \end{equation}
 This subspace is topologically equivalent to $\mathbb{RP}^3$, which can be noticed through the
-homeomorphism from $\mathbb{RP}^3$ to the SLag:
+homeomorphism from $\mathbb{RP}^3$ to the SLag \cite{McLean1996}:
 \begin{equation}
 (u_0,u_1,u_2,u_3) \to (u_0,u_1,u_2,u_3, -(u_0^5+u_1^5+u_2^5+u_3^5)^{1/5}).
 \end{equation}
 
 In order to prove that the obtained subspace is indeed special-Lagrangian we must
 verify that the Kähler form vanishes at the SLag and that it is calibrated with respect to the
-same three-form as the $\Omega_3$ of the quintic.
+same three-form as the $\Omega_3$ of the quintic \cite{Becker1995}.
 \begin{itemize}
   \item The Kähler form $k$ transforms under the anti-holomorphic involution as $k\to -k$, 
     but since the pull-back of $k$ onto the three-dimensional subspace must be real and thus invariant under the anti-holomorphic involution, 
@@ -80,32 +78,34 @@ The holomorphic three-form in a non-homogeneous patch where $x_0\neq0$ is
   \Omega_3=\frac{4}{2\pi i}\int \frac{x_0 dx_1\wedge dx_2 \wedge dx_3 \wedge dx_4}{P_5(x_i)}.
   \label{eq:3form}
 \end{equation}
-If we interpret $x_4$ as a function of $P_5$ and integrate over a loop around $P_5=0$
+To show that the SLag is calibrated with respect to the Calabi-Yau three form,
+we interpret $x_4$ as a function of $P_5$ and integrate over a loop around $P_5=0$
 \begin{equation}
   \Omega_3=\frac{x_0 dx_1\wedge dx_2 \wedge dx_3}{x_4^4}
   =\frac{dy_1\wedge dy_2\wedge dy_3}{y_4^4}
+  \label{eq:hol3}
 \end{equation}
 where we have defined the local coordinates $y_i=x_i/x_0$.
 By taking the norm of the previous equation, we relate $\Omega_3$ to the determinant of the 
 six-dimensional metric
-\todoin{Why metric appears?}
 \begin{equation}
   ||\Omega_3||^2 = \frac{1}{\det g |y_4|^8}.
 \end{equation}
 Since $\Omega_3$ is covariantly constant, $||\Omega_3||$ must also be proportional to a constant defined as
 \begin{equation}
-  ||\Omega_3||^2 = 8e^{2\kappa}.
+  ||\Omega_3||^2 = \alpha. %8e^{2\kappa}.
 \end{equation}
 The pull-back of the six-dimensional metric onto the three-cycle is
 \begin{equation}
-  h_{\alpha\beta}=2\partial_\alpha X^i \partial_\beta X^{\bar j}g_{i\bar j}
+  h_{\alpha\beta}=2\partial_\alpha y^i \partial_\beta y^{\bar j}g_{i\bar j}.
 \end{equation}
-So the volume form of the SLag three-cycle coincides with $\Omega_3$
+The volume form of the SLag three-cycle written in terms of the coordinates $\sigma^i$
+defined on the three-cycle is
 \begin{equation}
-  e^k \sqrt{\det h_{ab}}d\sigma^1\wedge d\sigma^2\wedge d\sigma^3
-  =e^k |\det \partial y| \frac{e^{-\kappa}}{|y_4|^4}d\sigma^1\wedge d\sigma^2\wedge d\sigma^3=\Omega_3
+   \sqrt{\det h_{ab}}d\sigma^1\wedge d\sigma^2\wedge d\sigma^3
+  = 8\alpha|\det \partial y|d\sigma^1\wedge d\sigma^2\wedge d\sigma^3
 \end{equation}
-\todoin{Why lhs has that form?}
+which is proportional to \eqref{eq:hol3} and thus the SLag is calibrated with respect to $\Omega_3$.
 \end{itemize}
 
 It is possible to define different SLags by exploiting the $\mathbb Z_5^4$ symmetry of the quintic,
@@ -122,12 +122,19 @@ Accounting for this constraint, there are $125$ SLags calibrated with respect to
 
 \subsection{Moduli space of SLags}
 
-\todoin{Not sure if the reasoning in this section is too sloppy.}
-We are not only interested in SLags themselves, but also in their moduli space.
-The reason is that deformations of SLag three-cycles codify the information of the open string 
-excitations of the D$6$-branes that wrap around them.
-In particular, they determine de vev of the scalar field excitations and thus the position of the D6-branes
-and whether they are rigid configurations or not.
+When we do model building with D-branes, we want to make sure that the gauge groups on the D-branes are not spontaneously broken by one D-brane in a stack being displaced from the rest.
+In other words, D-branes that wrap cycles which can be deformed or displaced, come with additional open string moduli in the adjoint representation of the gauge group.
+Geometrically, these open string moduli are played by the deformation moduli of cycles.
+Roughly speaking, we can thus distinguish between two types of cycles:
+rigid cycles, which do no carry deformation moduli
+and non-rigid cycles, which carry deformation moduli.
+The first class is perfect for model building, while the latter case requires more work to argue why the vev of the open string moduli is set to zero.
+
+%We are not only interested in SLags themselves, but also in their moduli space.
+%The reason is that deformations of SLag three-cycles codify the information of the open string 
+%excitations of the D$6$-branes that wrap around them.
+%In particular, they determine de vev of the scalar field excitations and thus the position of the D6-branes
+%and whether they are rigid configurations or not.
 
 A deformation of a reference SLag three-cycle $\Pi_3$ into another three-cycle (in the same homology class as the original SLag)  can be parameterized by a normal vector field, which belongs to the normal bundle of $\Pi_3$.  
 This deformation normal vector field can be written in a basis $s^i$ as
@@ -154,6 +161,7 @@ SLags and the SLags are guaranteed to remain rigid.
 \subsection{Intersection numbers of SLags}
 We now study the intersection numbers between different SLags, which are used to determine the number 
 of chiral fermions associated to the intersecting D6-branes.
+The computation was done in \cite{Brunner2000}.
 
 First of all, we choose a coordinate patch of $\mathbb{CP}^4$ where $x_0=1$ and take one of the SLags to be $\ket{0,0,0,0,0}$
 and the other SLag $\ket{0,k_1,k_2,k_3,k_4}$.
@@ -212,6 +220,7 @@ $\ket{0,0,0,0,0}$ with $\ket{0,k_1,k_2,k_3,k_4}$ that preserve supersymmetry ($\
 %\end{equation}
 
 \subsection{Volume of SLags}
+\label{ss:vol}
 We now try to compute the volume of SLag three-cycles, as they carry the information of the four-dimensional
 gauge theory supported by the wrapping D$6$-branes, such as the gauge coupling.
 It suffices to determine the volume of $\ket{0,0,0,0,0}$, since a generic SLag can be obtained through $\mathbb Z_5$ rotations.
@@ -235,7 +244,8 @@ In practice, we can make no further progress through this approach, since we do 
 the Calabi-Yau metric of the quintic.
 
 We come back to the integral \eqref{eq:int},
-where the integration domain is given by the points $x_1,x_2,x_3 \in \mathbb R$ where $x_4=-(1+x_1^5+x_2^5+x_3^5)^{4/5}$ is real.
+where the integration domain is given by the points $x_1,x_2,x_3 \in \mathbb R$ where $x_4=-(1+x_1^5+x_2^5+x_3^5)^{4/5}$ is real
+forms the constraint that traces out the integration domain in the $\mathbb{R}^3$ spanned by ($x_i=1,2,3$).
 Given the complexity of integrating over this hypersurface, we restrict the integration over the positive octant $0<x_i<\infty$, 
 where the reality condition of $x_4$ is guaranteed.
 Although this would only yield a lower bound of the volume, it can be used as an estimate of
@@ -243,7 +253,7 @@ the behaviour of the volume of SLags when we turn on the deformations of the qui
 Over the positive octant, the integration can be carried out analytically and it yields as lower
 bound of the total volume
 \begin{equation}
-  \mathrm{Vol}\geq\frac{\Gamma\qty(\frac{1}{5})\Gamma\qty(\frac{3}{10})\Gamma\qty(\frac{11}{10})\Gamma\qty(\frac{6}{5})}{5 \times 2^{1/5}\pi}\approx 0.61
+  \mathrm{Vol}\geq\frac{\Gamma\qty(\frac{1}{5})\Gamma\qty(\frac{3}{10})\Gamma\qty(\frac{11}{10})\Gamma\qty(\frac{6}{5})}{5 \times 2^{1/5}\pi}\approx 0.61.
   \label{eq:vol}
 \end{equation}
 
@@ -256,8 +266,8 @@ A workaround to this problem consists in considering non-supersymmetric configur
 which are not calibrated with respect to the same three-form as $\ket{0,0,0,0,0}$.
 This allows to obtain a spectrum containing three generations of chiral fermions.
 To cancel RR charges, a hidden sector of D-branes is introduced which does not intersect the 
-Standard Model branes.
-In the case we have a supersymmetric configuration and no hidden spectrum, it suffices to introduce a stack of 4 coincident
+Standard Model branes, which is the strategy followed in \cite{Blumenhagen1}\cite{Blumenhagen2}.
+In the case when we have a supersymmetric configuration and no hidden spectrum, it suffices to introduce a stack of 4 coincident
 D6-branes wrapping the SLag $\ket{0,0,0,0,0}$. Although this last configuration has no RR tadpoles, 
 it leads to a $SO(8)$ gauge theory on the D6-branes, so it does not contain a chiral spectrum.
 
@@ -270,7 +280,7 @@ A generalization of Fermat's quintic consists in considering hypersurfaces defin
   P_5(z)=\sum_{n_0+n_1+n_2+n_3+n_4=5} a_{n_0 n_1 n_2 n_3 n_4} z_0^{n_0}z_1^{n_1}z_2^{n_2}z_3^{n_3}z_4^{n_4}=0
 \end{equation}
 This construction reduces to Fermat's quintic when $a_{50000}=a_{05000}=a_{00500}=a_{00050}=a_{00005}=1$ and all other coefficients are zero.
-A well-know example is
+A well-know example of a deformation is
 \begin{equation}
   z_0^5+z_1^5+z_2^5+z_3^5+z_4^5- 5\psi z_0z_1z_2z_3z_4=0
 \end{equation}
@@ -298,18 +308,21 @@ Subtracting the $25$ components of $GL(5,\mathbb C)$ we obtain $101$ deformation
 This is precisely the Hodge number $h_{2,1}=101$, since the defining homogeneous polynomial  
 represents a particular choice of the complex structure, which is given by a
 harmonic $(2,1)$-form in $H^{2,1}(X,\mathbb C)$.
-The deformations of the Kähler structure are given by the $h^{1,1}$ and there is precisely one possible deformation.
+The variations of the Kähler structure are given by the $h^{1,1}$ and
+for the quintic there exists precisely one Ricci-flat Kähler form.
+%there is precisely one possible deformation.
 
 Fermat's quintic enjoys the $\mathbb Z_5^4$ symmetry acting on the homogeneous coordinates 
 \begin{equation}
   z_i \to \omega^{k_i} z, \qquad \omega_i=e^{i\frac{2\pi}{5}}
   \label{eq:sim}
 \end{equation}
-which can be broken into a smaller subgroup when turning on deformations.
+which is broken into a smaller subgroup when turning on deformations.
 We should also examine whether deformations introduce any singularities, which
 are defined as the points 
+satisfying the following equations simultaneously:
 \begin{equation}
-  P(X)=0, \qquad dP=0
+  P(X)=0, \qquad dP=0.
 \end{equation}
 The nature of the singularity is obtained by evaluating the Hessian at the singularity.
 That is, calculating $d^2 P$ in a local coordinate patch, where one of the homogeneous coordinate is non-zero.
@@ -349,8 +362,10 @@ We proceed to summarize the singularities and associated symmetry subgroups of t
       z_0^5+z_1^5+z_2^5+z_3^5+z_4^5 - 5\psi(\text{deformation monomial})=0,
     \end{equation}
     we find that the symmetry group is $\mathbb Z_5^3$ and
-    that for particular values of $\psi$ they develop singularities.
-    Since the Hessian vanishes at those singularities, an additional treatment would be needed to determine the nature of the singularity.
+    that for particular values of $\psi$ they develop
+    ordinary double singularities on hypersurfaces of the quintic.
+    This implies that in the presence of certain deformations we encounter singular surfaces or singular curves, whose mathematical features first have to be understood before these backgrounds can be applied in string compactifications.  
+%    Since the Hessian vanishes at those singularities, an additional treatment would be needed to determine the nature of the singularity.
 %  \item $z_0z_1z_2(z_3)^2$
 %
 %    $z_0^5+z_1^5+z_2^5+z_3^5+z_4^5- 5\psi z_0z_1z_2(z_3)^2=0$
@@ -391,7 +406,6 @@ We proceed to summarize the singularities and associated symmetry subgroups of t
 %    \end{equation}
 %    $\psi=\frac{1}{\sqrt[5]{4^4}}$
 %
-%    \todoin{Check values, add words}
 \end{enumerate}
 
 \subsection{SLags on the deformed quintic}
@@ -414,7 +428,7 @@ The possible combinations of $k_i$ lead to $125$ supersymmetric SLag three-cycle
 calibrated with respect to the same holomorphic three-form as $\ket{0,0,0,0,0}_{\psi}$.
 For this reason, there are the same number of supersymmetric SLags as on the undeformed Fermat's quintic.
 It should be noted that the $500$ SLags calibrated which are not calibrated with respect to the same three-form as $\ket{0,0,0,0,0}$ 
-are removed completely.
+do not appear at all.
  
 To determine the topology of the SLags, we try to form an homeomorphism between $\mathbb{RP}^3$ and the SLags.
 When the deformation is non-zero, it seems impossible to invert one of the variables of the defining
@@ -435,7 +449,7 @@ the same obstruction to model building applies.
 
 We now compute the volume of a SLag for small values of $\psi<1$.
 In order to solve the hypersurface equation in terms of an expansion of a small parameter, 
-we define $\Delta$, $\eta$ and $u$ as
+we define $\Delta$, $\eta$ and $u$ \cite{Candelas1991} as
 \begin{equation}
 \Delta = 1 + x_1^5 + x_2^5 +x_3^5, \qquad \eta = \Delta^{-1/5} x_4, \qquad u = \Delta^{-4/5} x_1 x_2 x_3,
 \end{equation}
@@ -461,7 +475,7 @@ the SLag to second order in $\psi$
 The volume of the SLag would be obtained integrating this three-form over the hypersurface that depends on $\psi$.
 Fortunately, the integration domain is the same as when $\psi=0$.
 Still, we cannot compute analytically this integral, so we restrict the integration region to
-the positive octant.
+the positive octant, as we did before in section ~\ref{ss:vol} ($0<x_i<\infty$).
 The integral of each term of the $\psi$ expansion can be obtained analytically in terms of gamma functions
 and it yields the lower bound of the volume of SLags
 \begin{align}
@@ -472,8 +486,9 @@ and it yields the lower bound of the volume of SLags
  \approx& 0.61-0.13\psi-0.0063\psi^2+O(\psi^3)
 \end{align}
 In order to compare this volume with the volume of the SLag at the Fermat point, we divide
-the result by the volume obtained in equation \eqref{eq:vol}.
+the result by the volume obtained in equation \eqref{eq:vol}
 \begin{equation}
   \mathrm{Vol}/\mathrm{Vol}|_{\psi=0} \approx 1 - 0.21\psi - 0.01\psi^2 + O(\psi^3)
 \end{equation}
 and observe a linear decrease in the lower bound of the volume.
+This implies that the gauge theory living on a D6-brane wrapped on such a SLag three-cycle will have an increasing gauge coupling away from the Fermat point.
