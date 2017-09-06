@@ -1,0 +1,138 @@
+\documentclass[oneside,secnumarabic,10pt,nobalancelastpage,nofootinbib,a4paper]{article}
+
+\usepackage[spanish, activeacute]{babel} %Definir idioma español
+\usepackage[utf8]{inputenc} %Codificacion utf-8
+\usepackage[T1]{fontenc}
+
+\usepackage{graphics}      % standard graphics specifications
+\usepackage{graphicx}      % alternative graphics specifications
+\usepackage{url}           % for on-line citations
+\usepackage{hyperref}
+%\usepackage{cleveref}
+\usepackage{bm}            % special 'bold-math' package
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{physics}
+\usepackage[exponent-product=\cdot,range-phrase=--,range-units=single]{siunitx}
+
+\usepackage{longtable}     % helps with long table options
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{babelbib}
+\usepackage{epigraph}
+
+%\setlength{\paperheight}{11in}
+\usepackage{todonotes}
+\usepackage{microtype}
+
+\graphicspath{{images/}}
+
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+\nouppercaseheads
+%\setlength{\parindent}{0pt}
+
+%tikz
+
+%\usepackage{tikz}
+%\usetikzlibrary
+%{decorations.markings}
+%\usepackage{xcolor}
+%\definecolor{gridcolor}{RGB}{255 216 234}
+%\definecolor{gridlabelcolor}{RGB}{255 24 131}
+%\def\rnd#1{
+%    \pgfmathprintnumberto
+%[precision=2]{#1}{\temp}\temp
+%}
+%
+%\usetikzlibrary{arrows}
+%\pgfdeclarelayer{background}
+%\pgfsetlayers{background,main}
+%\usetikzlibrary{tqft}
+%\usetikzlibrary{calc}
+
+\usepackage{wrapfig}
+\usepackage{slashed}
+\usepackage{youngtab}
+
+%Default inline comments
+\newcommand{\todoin}[2][]{\todo[inline,#1]{#2}}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\interfootnotelinepenalty=10000
+\begin{document}
+
+
+
+
+
+
+INTRO
+El principal objetivo de la teoría de cuerdas es describir de forma unificada las interacciones gauge
+del modelo estándar con la gravitación de la relatividad general.
+Desde el punto de vista fenomenológico, es interesante obtener el modelo estándar como una teoría
+efectiva de la teoría de cuerdas a bajas energías.
+Existen diversas formas de intentar recuperar el modelo estándar a partir de la teoria de cuerdas.
+En este trabajo nos centramos en un formalismo muy prometedor, que se basa en considerar intersecciones
+de D6-branas en la teoría de cuerdas Tipo IIA.
+Estas D6-branas han de enrollarse sobre subvariedades muy particulares, denominadas lagrangianos especiales.
+\todoin{Redundante: cambiar en este trabajo}
+En este trabajo estudiamos unas características especialmente interesantes de los lagrangianos especiales:
+su topología y posibles deformaciones, sus intersecciones y sus volúmenes.
+Elegimos como espacio de la compactificación un caso ampliamente estudiado, la quíntica aplicando la proyección orientifold.
+
+--------------
+
+COMPACTIFICACION
+
+La teoría de cuerdas requiere 10 dimensiones para que sea consiste, pero solo observamos 4 dimensiones en la práctica.
+Por tanto, las dimensiones adicionales han de estar compactificadas en una variedad con un volumen extremadamente pequeño.
+Entonces, el espacio se decompone en un espacio-tiempo de Minkowski de cuatro dimensiones y un espacio interno de seis dimensiones.
+La variedad que describe este espacio interno no esta determinada a priori por la teoria.
+Sin embargo, desde el punto de vista fenomenológico, hay variedades especialmente interesantes.
+En concreto, es interesante que la compactificación preserve parcialmente la supersimetría con la que cuenta
+la teoría de cuerdas.
+La famila de variedades que cumplen esta propiedad son las variedades de Calabi-Yau.
+
+Una variedad de Calabi-Yau es una variedad equipada con una estructura compleja, una forma de Kähler, una 
+tres forma y una metrica, cuyo tensor de Ricci es nulo. 
+No todos estos objetos son independientes, para una estructura compleja y una forma de Kähler dadas, existe 
+una única métrica con tensor de Ricci nulo.
+
+Un ejemplo muy estudiado de variedad de Calabi-Yau es la quíntica de Fermat, la cual es una subvariedad del
+espacio proyectivo complejo en cuatro dimensiones.
+El espacio proyecto complejo de cuatro dimensiones se define como el espacio complejo de cinco dimensiones sin
+el origen en el que se identifican los puntos proporcionales.
+Es decir módulo la relación de equivalencia entre puntos proporcionales.
+
+Una vez definido el espacio proyectivo, la quíntica de Fermat es la hipersuperficie que satisface la siguiente ecuación 
+quíntica.
+Podríamos considerar términos adicionales en la ecuación quíntica y definirían otras variedades de Calabi-Yau, una 
+estructura compleja diferente.
+El espacio de todas la variedades de Calabi-Yau posibles obtenidas mediante deformaciones continuas de la forma de Kahler 
+y la estructura compleja define el espacio modular de una variedad de Calabi-Yau.
+Por tanto, la quíntica de Fermat solamente corresponde a un punto del espacio modular.
+\todoin{Tal vez reestructurar}
+--------------
+
+Las compactificaciones de una teoria de cuerdas de tipo II en una variedad Calabi-Yau contienen demasiada supersimetría 
+como para obtener fermiones quirales en la teoría efectiva cuadridimensional, por lo que su utilidad es limitada.
+La solución a esta limitación consiste en tomar la aplicar la proyección orientifold, que consiste en tomar el espacio cociente
+de la variedad de Calabi-Yau módulo la acción del operador $\Omega$ y de $\mathcal R$.
+$\Omega$ es un operador que invierte la orientación de las cuerdas,
+mientras que $\mathcal R$ es una simetría $\mathbb Z_$.
+Los puntos fijos de $X$ bajo $\mathcal R$ se denominan planos orientifold.
+\todoin{Explicar que papel juegan los planos orientifold?}
+
+Espacio modular
+
+--------------
+
+
+BRANAS
+
+En teoria de supercuerdas de tipo IIA tenemos como objetos fundamentales cuerdas abiertas y Dp-branas.
+Las Dp-branas pueden verse como una generalizacion ...
+
+
+\end{document}

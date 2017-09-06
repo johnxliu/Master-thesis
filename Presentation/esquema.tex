@@ -1,0 +1,162 @@
+\documentclass[oneside,secnumarabic,10pt,nobalancelastpage,nofootinbib,a4paper]{article}
+
+\usepackage[spanish, activeacute]{babel} %Definir idioma español
+\usepackage[utf8]{inputenc} %Codificacion utf-8
+\usepackage[T1]{fontenc}
+
+\usepackage{graphics}      % standard graphics specifications
+\usepackage{graphicx}      % alternative graphics specifications
+\usepackage{url}           % for on-line citations
+\usepackage{bm}            % special 'bold-math' package
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{physics}
+\usepackage[exponent-product=\cdot,range-phrase=--,range-units=single]{siunitx}
+
+
+\usepackage{todonotes}
+\usepackage{microtype}
+\usepackage{xcolor}
+
+\graphicspath{{images/}}
+
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+\nouppercaseheads
+
+%Default inline comments
+\newcommand{\todoin}[2][]{\todo[inline,#1]{#2}}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\interfootnotelinepenalty=10000
+\begin{document}
+
+INTRO
+
+La teoría de cuerdas es la principal candidata para describir de forma unificada las interacciones gauge
+del modelo estándar con la gravitación de la relatividad general.
+Desde el punto de vista fenomenológico, es interesante obtener el modelo estándar como una teoría
+efectiva de la teoría de cuerdas a bajas energías.
+\textcolor{red}{Existen diversas formas de intentar recuperar el modelo estándar a partir de la teoria de cuerdas.}
+En este trabajo nos hemos centrado en un formalismo muy prometedor, que se basa en considerar intersecciones
+de D6-branas en la teoría de cuerdas Tipo IIA.
+\textcolor{red}{Estas D6-branas han de enrollarse sobre subvariedades muy particulares, denominadas lagrangianos especiales.}
+El objetivo de este trabajo ha consistido en estudiar unas características especialmente interesantes de los lagrangianos especiales:
+su topología y posibles deformaciones, sus intersecciones y sus volúmenes.
+Elegimos como espacio de la compactificación un caso ampliamente estudiado, la quíntica aplicando la proyección orientifold.
+
+--------------
+
+COMPACTIFICACION
+
+La teoría de cuerdas requiere 10 dimensiones para que sea consistente, pero solo observamos 4 dimensiones en la práctica.
+\textcolor{red}{Por tanto, las dimensiones adicionales han de estar compactificadas en una variedad con un volumen extremadamente pequeño.}
+Entonces, el espacio se decompone en un espacio-tiempo de Minkowski de cuatro dimensiones y un espacio interno de seis dimensiones.
+\textcolor{red}{La variedad que describe este espacio interno no esta determinada a priori por la teoria.
+Sin embargo, desde el punto de vista fenomenológico, hay variedades especialmente interesantes.
+En concreto, es interesante que la compactificación preserve parcialmente la supersimetría con la que cuenta
+la teoría de cuerdas.}
+La famila de variedades que cumplen esta propiedad son las variedades de Calabi-Yau.
+
+Una variedad de Calabi-Yau es una variedad equipada con una estructura compleja, una forma de Kähler, una 
+tres forma y una metrica, cuyo tensor de Ricci es nulo. 
+\textcolor{red}{No todos estos objetos son independientes, para una estructura compleja y una forma de Kähler dadas, existe 
+una única métrica con tensor de Ricci nulo.
+Por otra lado, la estructura compleja y la forma de Kähler no son únicas, si no que existe todo un espacio 
+formado por todas sus deformaciones continuas posibles, el espacio modular.}
+
+Un ejemplo muy estudiado de variedad de Calabi-Yau es la quíntica de Fermat, la cual es una subvariedad del
+espacio proyectivo complejo en cuatro dimensiones.
+El espacio proyecto complejo de cuatro dimensiones se define como el espacio complejo de cinco dimensiones sin
+el origen en el que se identifican los puntos proporcionales.
+Es decir módulo la relación de equivalencia entre puntos proporcionales.
+
+Una vez definido el espacio proyectivo, la quíntica de Fermat es la hipersuperficie que satisface la siguiente ecuación 
+quíntica.
+
+--------------
+
+\textcolor{red}{Las compactificaciones de una teoria de cuerdas de tipo II en una variedad Calabi-Yau contienen demasiada supersimetría 
+como para obtener fermiones quirales en la teoría efectiva cuadridimensional, por lo que su utilidad es limitada.}
+La solución a esta limitación consiste en tomar la aplicar la proyección orientifold, que consiste en tomar el espacio cociente
+de la variedad de Calabi-Yau módulo la acción del operador $\Omega$ y de $\mathcal R$.
+$\Omega$ es un operador que invierte la orientación de las cuerdas,
+mientras que $\mathcal R$ es una simetría $\mathbb Z_$.
+En la quíntica, tomamos como acción de $\mathcal R$ la conjugación compleja de las coordenadas.
+
+El efecto de la proyección orientifold sobre el espacio modular es que para las deformaciones 
+del este tipo, donde añadimos un monomio multiplicado por un parámetro psi, psi ha de ser real.
+
+--------------
+
+BRANAS
+
+En teoria de supercuerdas de tipo IIA tenemos como objetos fundamentales las cuerdas abiertas y las Dp-branas.
+Las Dp-branas pueden verse como una generalización de las cuerdas a objetos de $(p+1)$-dimensiones.
+De este modo, una D1-brana sería una D-cuerda, una D2-brana sería una membrana tridimensional y así sucesivamente.
+Consideraremos únicamente D6-branas, que ocupan todo el espacio de Minkowski y que se enrollan sobre tres dimensiones internas.
+
+Sobre las D6-branas pueden acabar las cuerdas abiertas.  
+Las excitaciones de cuerdas abiertas con extremos en D6-branas describen partículas en la teoría efectiva cuadridimensional.
+En concreto, las cuerdas con extremos en $N$ D6-branas apiladas tienen en su espectro no massivo bosones gauge del grupo $U(N)$.
+En cambio, las cuerdas con un extremo en una pila de $N_1$ D6-branas y otro en $N_2$ D6-branas que se intersecan, 
+tienden a localizarse en la intersección para minimizar la energía.
+Estas describen como partículas no masivas fermiones que se transforman en la representación fundamental de $U(N_1)$ y antifundamental de
+$U(N_2)$.
+
+--------------
+
+Para que las D-branas describan una configuración estable, su tensión ha de ser mínima. 
+Por tanto, han de enrollarse sobre una subvariedad cuyo volumen sea mínimo. 
+Las subvariedades que cumplen esta condición se denominan lagrangianos especiales y 
+verifican que sobre ellos la forma de Kähler se anula y la forma holomorfa toma valores puramente reales, salvo por una fase.
+En la quíntica bajo la proyección orientifold, los puntos de la quíntica reales forma una clase de lagrangianos especiales.
+Estos coinciden justamente con los planos orientifold.
+Existen otros lagrangianos especiales que se obtienen mediante rotaciones adicionales.
+
+Se puede determinar que la topología de los lagrangianos especiales que hemos obtenido en la quintica es la del espacio real proyectivo de dimensión
+tres. Esto a su vez implica que los lagrangianos especiales no pueden ser deformados de manera continua. 
+Por tanto, las D-branas se mantienen rígidas y el grupo gauge asociado a una pila de branas no se ve roto espontáneamente debido a que las 
+branas se separen.
+
+--------------
+
+Por otro lado, obtenemos que no hay ninguna interesección entre lagrangianos especiales que preserve la supersimetría.
+Esto significa que la quíntica no permite describir fermiones quirales. 
+Una solución que algunos autores proponen es añadir un sector oculto de branas que no interseque a las branas del modelo estándar.
+
+Además, es interesante calcular el volumen de los lagrangianos especiales, pues determinan la constante de acoplo de la 
+teoría gauge de las D-branas situadas que enrollan el lagrangiano especial. Concretamente, el cuadrado de la constante de acoplo
+es inversamente proporcional al volumen del lagrangiano especial.
+
+La determinación del volumen en la quíntica presenta una dificultad, pues no sabemos cómo resolver analíticamente la integral de volumen tridimensional.
+Si restringimos el dominio de integración a las coordenadas positivas únicamente, obtenemos una expresión analítica para la cota inferior 
+del volumen. Su valor numérico es aproximadamente 0.61.
+
+--------------
+
+Una vez estudida la quíntica de Fermat, tratamos sus deformaciones.
+Hay 101 un deformaciones posibles, pero solo consideramos la siguiente, donde añadimos el producto de todas las coordenadas.
+
+Determinamos que la propiedades topológicas permanecen invariantes: los lagrangianos especiales siguen siendo rígidos y no hay interesecciones
+entre ellos.
+
+En cambio, si observamos una variación del volumen que depende de $\psi$. 
+Si restringimos el dominio de integración a valores positivos, podemos dividir el volumen obtenido entre el volumen que hemos calculado previamente
+sin deformaciones.
+Observamos que para valores, pequeños de $\psi$, el volumen decrece predominantemente de forma lineal.
+Esto se traduce en la constante de acoplo aumenta al aplicar la deformación.
+
+--------------
+
+Como comentario final, hemos visto que los lagrangianos supersimétricos en la quíntica son rígidos,
+lo cual es conveniente desde el punto de vista fenomenológico.
+Como contrapartida, no hay interseciones entre lagrangianos especiales, por lo que no obtenemos fermiones
+quirales.
+
+Aun así, sería conveniente aplicar un tratamiento similar a otras compactificaciones, donde puede que sí sea posible
+obtener intersecciones.
+
+Finalmente, sería interesante estudiar el resto de deformaciones de la quíntica y hallar un método para el cálculo preciso del volumen.
+
+\end{document}
